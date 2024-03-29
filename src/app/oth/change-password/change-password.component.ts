@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-change-password',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './change-password.component.html',
-  styleUrls: ['./change-password.component.scss']
+  styleUrls: ['./change-password.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
 })
-export class ChangePasswordComponent {
+export class ChangePasswordComponent implements OnInit {
+  constructor() {}
 
+  ngOnInit(): void {}
 }

@@ -3,14 +3,18 @@ import { Component, OnInit } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 import { MenuModule } from 'primeng/menu';
-import { chart1Data, chart2Data,chart3Data } from '../../../services/chart-data';
+import {
+  chart1Data,
+  chart2Data,
+  chart3Data,
+} from '../../../services/chart-data';
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
-  imports: [CardModule, ChartModule, MenuModule,CommonModule],
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  standalone: true,
+  imports: [CardModule, ChartModule, MenuModule, CommonModule],
 })
 export class DashboardComponent implements OnInit {
   chart1Options: any;
@@ -32,4 +36,3 @@ export class DashboardComponent implements OnInit {
     this.chart3Data = chart3Data().data;
   }
 }
-

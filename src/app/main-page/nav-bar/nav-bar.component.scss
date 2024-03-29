@@ -22,7 +22,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .topbar {
@@ -83,15 +82,14 @@ img {
 
 .search-container::before {
   content: "search";
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   position: absolute;
   left: 10px;
   font-size: 20px;
   top: 55%;
   transform: translateY(-50%);
-  color: #718EBF;
+  color: #718ebf;
 }
-
 
 @media screen and (min-width: 2560px) {
   .app-header .app-header__content {
@@ -103,7 +101,6 @@ img {
     width: 84%;
     height: 85px;
   }
-
 }
 
 @media screen and (max-width: 992px) {
@@ -192,7 +189,7 @@ img {
   }
 }
 
-@media (min-width:1726px) and (max-width: 2100px) {
+@media (min-width: 1726px) and (max-width: 2100px) {
   .app-header {
     padding: 28px;
     margin-left: 30px;
@@ -203,7 +200,7 @@ img {
   }
 }
 
-@media (min-width:2101px) and (max-width: 2559px) {
+@media (min-width: 2101px) and (max-width: 2559px) {
   .app-header {
     padding: 28px;
     margin-left: -4px;
@@ -213,7 +210,6 @@ img {
     z-index: 1000;
   }
 }
-
 
 .icon-circle {
   width: 30px;
@@ -228,7 +224,6 @@ img {
 .icon-circle i {
   color: #595555;
 }
-
 
 .header {
   display: flex;
@@ -267,22 +262,18 @@ img {
         line-height: 36px;
         letter-spacing: -0.03em;
         text-align: left;
-
       }
     }
-
-
   }
 }
 
 ::placeholder {
-  color:
-    #718EBF;
+  color: #718ebf;
   opacity: 1;
   /* Firefox */
 }
 
 ::-ms-input-placeholder {
   /* Edge 12-18 */
-  color: #718EBF;
+  color: #718ebf;
 }

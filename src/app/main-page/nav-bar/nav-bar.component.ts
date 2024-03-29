@@ -1,13 +1,17 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { ROUTES } from '../side-bar/side-bar.component';
-import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
+import {
+  Location,
+  LocationStrategy,
+  PathLocationStrategy,
+} from '@angular/common';
 import { Router } from '@angular/router';
 import { valueOrDefault } from 'chart.js/dist/helpers/helpers.core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.scss']
+  styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
   private listTitles: any[] = [];
@@ -17,7 +21,11 @@ export class NavBarComponent implements OnInit {
   private sidebarVisible: boolean;
   title: string;
 
-  constructor(location: Location, private element: ElementRef, private router: Router) {
+  constructor(
+    location: Location,
+    private element: ElementRef,
+    private router: Router
+  ) {
     this.location = location;
     this.sidebarVisible = false;
     this.title = this.getTitle();
@@ -31,7 +39,7 @@ export class NavBarComponent implements OnInit {
     // this.router.events.subscribe((event) => {
     //   this.title = this.getTitle();
     // });
-    this.listTitles = ROUTES.filter(listTitle => listTitle);
+    this.listTitles = ROUTES.filter((listTitle) => listTitle);
     const navbar: HTMLElement = this.element.nativeElement;
     this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
     this.getTitle();
@@ -85,7 +93,9 @@ export class NavBarComponent implements OnInit {
       if (body.querySelectorAll('.main-panel')) {
         document.getElementsByClassName('main-panel')[0].appendChild($layer);
       } else if (body.classList.contains('off-canvas-sidebar')) {
-        document.getElementsByClassName('wrapper-full-page')[0].appendChild($layer);
+        document
+          .getElementsByClassName('wrapper-full-page')[0]
+          .appendChild($layer);
       }
       setTimeout(() => {
         $layer.classList.add('visible');
@@ -105,7 +115,7 @@ export class NavBarComponent implements OnInit {
   }
   getTitle() {
     let title = 'Dashboard';
-  
+
     switch (this.router.url.replace('/', '').toLowerCase()) {
       case 'dashboard': {
         title = 'Dashboard';
@@ -124,7 +134,7 @@ export class NavBarComponent implements OnInit {
         title = 'Dashboard';
       }
     }
-  
+
     return title;
   }
   // getTitle() {

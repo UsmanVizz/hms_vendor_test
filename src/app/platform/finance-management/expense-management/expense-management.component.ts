@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-expense-management',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './expense-management.component.html',
-  styleUrls: ['./expense-management.component.scss']
+  styleUrls: ['./expense-management.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
 })
-export class ExpenseManagementComponent {
+export class ExpenseManagementComponent implements OnInit {
+  constructor() {}
 
+  ngOnInit(): void {}
 }

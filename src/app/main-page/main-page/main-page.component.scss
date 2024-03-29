@@ -1,28 +1,10 @@
-.nav-and-body {
-    width: calc(100% - 295px);
-    height: 100%;
-}
-
-.route {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0 20px;
-}
-
-.router-outlet-container {
-    margin: 20px 0 20px 26px;
-    width: calc(100% - 295px) !important;
-}
-
 .container-fluid {
-    --bs-gutter-x: 0 !important;
-    background: #F5F7FA;
-    background-color: #f5f7fa !important;
-
+  background: #f5f7fa;
 }
 
-// :root {
-//     body {
-//         
-//     }
-// }
+@media (min-width: 1400px) {
+  .container {
+    width: 1264px !important;
+    max-width: 1540px;
+  }
+}
