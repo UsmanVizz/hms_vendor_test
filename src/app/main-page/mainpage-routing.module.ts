@@ -72,6 +72,20 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'branch-detail/:id',
+        loadComponent: () =>
+          import('./../platform/manage-branch/branch-detail/branch-detail.component').then(
+            (m) => m.BranchDetailComponent
+          ),
+      },
+      {
+        path: 'hall-detail/:id',
+        loadComponent: () =>
+          import('./../platform/manage-hall/hall-detail/hall-detail.component').then(
+            (m) => m.HallDetailComponent
+          ),
+      },
+      {
         path: 'deals',
         loadComponent: () =>
           import('./../platform/manage-menu/deals/deals.component').then(

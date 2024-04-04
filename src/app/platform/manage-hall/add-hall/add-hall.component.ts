@@ -9,7 +9,17 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class AddHallComponent implements OnInit {
-  constructor() {}
+  images = [
+    { src: 'assets/images/img.jpg', alt: 'Description of image 1' },
+    { src: 'assets/images/img.jpg', alt: 'Description of image 2' },
+    { src: 'assets/images/img.jpg', alt: 'Description of image 3' },
+  ];
+  title: string;
+  description: string;
 
+  constructor() {
+    this.title = '';
+    this.description = '';
+  }
   ngOnInit(): void {}
 }

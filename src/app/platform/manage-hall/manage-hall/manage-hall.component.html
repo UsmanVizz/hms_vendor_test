@@ -35,7 +35,7 @@
   </div>
 </div>
 <div class="card-container" style="margin-top: 30px">
-  <div class="card" *ngFor="let data of cardData">
+  <div class="card" *ngFor="let data of cardData" (click)="navigateToDetail(data)">
     <p-card>
       <ng-template pTemplate="header">
         <img [src]="data.imageUrl" class="card-img" alt="..." />

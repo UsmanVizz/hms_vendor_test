@@ -1,0 +1,94 @@
+.card{
+    padding:20px;
+    margin:30px;
+}
+.br-decription{
+    padding-top:10px;
+    font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+margin-left: 60px;
+line-height: 19.36px;
+text-align: left;
+
+}
+.br-name{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    margin-left: 60px;
+}
+.br-id{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 60px;
+    line-height: 19.36px;
+    text-align: left;
+    
+}
+.add-address{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    margin-left: 60px;
+    text-align: left; 
+}
+.parking-capacity{
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+    margin-left: 60px;
+    text-align: left; 
+}
+input[type=text] {
+    width:80%;
+    font-size:15px;
+    padding: 24px 20px;
+    margin: 8px 60px;
+    box-sizing: border-box;
+  }
+  .form-select-lg{
+    width:80%;
+    margin-left: 60px;
+    padding: 14px 20px;
+  }
+  .form-control-text{
+    width:80%;
+  }
+  .btn {
+    width: 32%;
+    height: 43px;
+    font-size:15px;
+  }
+  #inputDescription{
+    width:90%;
+    margin-left: 60px;
+  }
+
+
+  .image-row {
+    display: flex;
+    margin-left:60px;
+    margin-top:20px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .image-row__image {
+    height: 120px;
+    width: 120px;
+    margin-right: 10px;
+    object-fit: cover;
+  }
+  .card-title{
+margin-left: 67px;
+font-family: Plus Jakarta Sans;
+font-size: 18px;
+font-weight: 700;
+line-height: 27px;
+  }

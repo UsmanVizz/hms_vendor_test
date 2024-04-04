@@ -1,0 +1,76 @@
+<div class="container">
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-8"> 
+        <div class="card" *ngIf="data" >
+          <div class="row no-gutters">
+            <div class="d-flex align-items-center" >
+              <h1
+                class="text-black flex-grow-1 mb-0"
+                style="
+                  font-size: 18px;
+                  font-weight: 700;
+                  color: black;
+                  font-family: Plus Jakarta Sans;
+                "
+              >
+             A1 Hall
+              </h1>
+              <div class="ml-auto">
+                <button
+                  class="custom-button"
+                  style="background-color: blue; font-size: 16px"
+                 
+                >
+                 Edit Hall
+                </button>
+              </div>
+            </div>
+            <div class="image-container">
+              <img [src]="data.imageUrl" alt="..." />
+            </div>
+            <div class="text-container">
+              <h4 classs="mt-4">Hall</h4>
+              <div class="info-container">
+               
+                <div class="info-item">
+                    <p class="info-label">Title</p>
+                    <p class="info-value">{{ data.title }}</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Description</p>
+                    <p class="info-value">{{ data.description }}</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">City</p>
+                    <p class="info-value">{{ data.city}}</p>
+                </div>
+                <div class="info-item">
+                  <p class="info-label">Area</p>
+                  <p class="info-value">{{ data.area }}</p>
+              </div>
+             
+            <div class="info-item">
+              <p class="info-label">Parking Capacity</p>
+              <p class="info-value">{{ data.capacity }}</p>
+          </div>
+          <div class="info-item">
+            <p class="info-label">Special Attractions</p>
+            <p class="info-value">{{ data.attraction }}</p>
+        </div>
+        <div class="info-item">
+          <p class="info-label">Address on Map</p>
+          <p class="info-value">{{ data.map }}</p>
+      </div>
+     
+    <div class="info-item">
+      <p class="info-label">Address</p>
+      <p class="info-value">{{ data.address }}</p>
+  </div>
+  <div class="info-item">
+    <p class="info-label">Venus Owner</p>
+    <p class="info-value">{{ data.owner}}</p>
+</div>
+            </div>
+            
+          </div></div></div></div></div></div>
