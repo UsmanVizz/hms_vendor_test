@@ -96,34 +96,6 @@
   height: 30px;
 }
 
-// ::ng-deep .p-button-secondary {
-//   border-radius: 6px;
-//   color: rgb(186, 180, 180);
-//   background: white !important;
-//   height: 33px !important;
-//   width: 30px;
-// }
-
-// .custom-button {
-//   border: none;
-//   background-color: #1814f3;
-//   color: white;
-//   padding: 12px 16px;
-//   border-radius: 8px;
-// }
-// .sort-button {
-//   border: 1px solid #dddddd;
-//   background-color: #ffffff;
-//   color: #dddddd;
-//   padding: 12px 16px;
-//   border-radius: 8px;
-// }
-// .card {
-//   display: flex;
-//   width: 614px;
-//   height: 216px;
-// }
-
 .image-container {
   flex: 1;
 }
@@ -131,11 +103,6 @@
 .text-container {
   flex: 2;
 }
-// // <<<<<<< HEAD
-// .carousel-inner>.item{
-//     width: 233px;
-//     height: 183px
-// }
 
 .card-container {
   display: grid;
@@ -171,9 +138,7 @@ text-align: center;
 .card.selected {
   border: 2px solid blue; 
 }
-// =======
 .carousel-inner > .item {
   width: 233px;
   height: 183px;
 }
-// >>>>>>> a3997ac7191b147730d8b26a1b15f1ce27cca6f3

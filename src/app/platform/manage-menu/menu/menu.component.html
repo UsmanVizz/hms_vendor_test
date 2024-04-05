@@ -1,3 +1,14 @@
+<div class="d-flex align-items-center" style="margin-top: 100px">
+  <div class="ml-auto">
+    <button
+      class="custom-button"
+      style="background-color: blue; font-size: 16px"
+      (click)="navigateToAddMenu()"
+    >
+      Add Menu
+    </button>
+  </div>
+</div>
 <section class="pt-5 pb-5">
   <div class="container">
     <div class="row">
@@ -48,7 +59,7 @@
 
 <div class="row" style="margin-top:30px">
   <div class="col-sm-6 mb-3 mb-sm-0" *ngFor="let category of cards">
-    <div class="vertical-card card" style="margin-bottom: 20px;"> 
+    <div class="vertical-card card" style="margin-bottom: 20px;">
       <div class="row no-gutters">
         <!-- Image Side -->
         <div class="col-md-4">
@@ -78,3 +89,4 @@
     </div>
   </div>    
 </div>
+

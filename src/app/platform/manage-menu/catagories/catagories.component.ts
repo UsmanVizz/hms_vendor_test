@@ -27,8 +27,8 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
   checked: boolean = false;
   ngAfterViewInit(): void {}
-  navigateToAddBranch() {
-    this.router.navigate(['menu']);
+  navigateToAddCategory() {
+    this.router.navigate(['hms-main/add-category']);
   }
   activeIndex: number = 0;
 

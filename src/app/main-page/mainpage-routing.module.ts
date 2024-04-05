@@ -79,6 +79,27 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'add-category',
+        loadComponent: () =>
+          import('./../platform/manage-menu/add-category/add-category.component').then(
+            (m) => m.AddCategoryComponent
+          ),
+      },
+      {
+        path: 'add-deal',
+        loadComponent: () =>
+          import('./../platform/manage-menu/add-deal/add-deal.component').then(
+            (m) => m.AddDealComponent
+          ),
+      },
+      {
+        path: 'add-menu',
+        loadComponent: () =>
+          import('./../platform/manage-menu/add-menu/add-menu.component').then(
+            (m) => m.AddMenuComponent
+          ),
+      },
+      {
         path: 'hall-detail/:id',
         loadComponent: () =>
           import('./../platform/manage-hall/hall-detail/hall-detail.component').then(

@@ -1,0 +1,117 @@
+// .container {
+//     display: flex;
+//     justify-content: space-around;
+//   }
+  
+//   .card {
+//     width: 40%;
+//     min-height: 200px;
+//     border: 1px solid #ccc;
+//     border-radius: 8px;
+//     padding: 10px;
+//     margin-bottom: 20px;
+//   }
+//   .example-box {
+//     width: 200px;
+//     height: 200px;
+//     border: solid 1px #ccc;
+//     color: rgba(0, 0, 0, 0.87);
+//     cursor: move;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-align: center;
+//     background: #fff;
+//     border-radius: 4px;
+//     position: relative;
+//     z-index: 1;
+//     transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+//     box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+//                 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+//                 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+//   }
+  
+//   .example-box:active {
+//     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+//                 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+//                 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+//   }
+  /* card.component.css */
+.card {
+   width:100%;
+    cursor: pointer;
+  }
+  .card-wrapper {
+    position: relative;
+  }
+  .drop-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+    background-color: transparent; 
+    border: 2px dashed #ccc; 
+  }
+  .selected {
+    background-color: blue;
+    color: white;
+  }
+
+  .card-carousel {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .card-row {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.3s ease;
+    flex-wrap: nowrap;
+    overflow: visible;
+  }
+  .carousel-buttons {
+    margin-top: 10px; 
+  }
+  
+  .carousel-buttons button {
+    margin-right: 10px; 
+  }
+
+.card-title {
+  color: black;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.card-body {
+  color: grey;
+  padding: 39px, 32px, 39px, 24px;
+  font-size: 13px;
+}
+.card-text {
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.title{
+  font-family: Plus Jakarta Sans;
+font-size: 14px;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: -0.02em;
+text-align: center;
+
+}
+
+.card.selected {
+  border: 2px solid blue; 
+}
+.carousel-inner > .item {
+  width: 233px;
+  height: 183px;
+}
+  
