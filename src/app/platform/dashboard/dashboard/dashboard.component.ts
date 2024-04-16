@@ -1,8 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CardModule } from 'primeng/card';
-import { ChartModule } from 'primeng/chart';
-import { MenuModule } from 'primeng/menu';
 import {
   chart1Data,
   chart2Data,
@@ -14,7 +11,7 @@ import {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
   standalone: true,
-  imports: [CardModule, ChartModule, MenuModule, CommonModule],
+  imports: [CommonModule],
 })
 export class DashboardComponent implements OnInit {
   chart1Options: any;

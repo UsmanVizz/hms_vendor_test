@@ -7,7 +7,7 @@
 }
 .card-body {
   color: grey;
-  padding: 39px, 32px, 39px, 24px;
+  // padding: 10px !important;
   font-size: 13px;
 }
 .carousel-inner > .item > a > img,
@@ -16,8 +16,8 @@
 .thumbnail a > img,
 .thumbnail > img {
   display: block;
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
 }
 .carousel-indicators {
   position: absolute;
@@ -85,13 +85,13 @@
   border: 1px solid #dddddd;
   background-color: #ffffff;
   color: #dddddd;
-
   padding: 12px 16px;
   border-radius: 8px;
 }
 .card {
   display: flex;
   width: calc(100% - 12px);
+  border-radius:0
   // height: 236px;
 }
 

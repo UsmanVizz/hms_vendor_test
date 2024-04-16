@@ -68,7 +68,7 @@
     
     </div>
     <div class="image-row" id="image-row">
-      <img class="image-row__image" *ngFor="let image of images" src="{{image.src}}" alt="{{image.alt}}">
+      <img class="image-row__image" *ngFor="let image of images" [src]="image.src" [alt]="image.alt">
     </div>
 </div>
 </div>

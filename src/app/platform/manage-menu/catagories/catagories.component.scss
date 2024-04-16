@@ -96,8 +96,8 @@
 }
 .card {
   display: flex;
-  width: 614px;
-  height: 196px;
+  width: calc(100% - 12px)
+  // height: 196px;
 }
 
 .image-container {

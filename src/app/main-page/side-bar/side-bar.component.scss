@@ -9,6 +9,7 @@
   max-width: 295px;
   height: 100%;
   z-index: 600;
+  font-weight:500;
 }
 
 // @media screen and (max-width: 767px) {
@@ -32,7 +33,7 @@
 
 .separator {
   border: none !important;
-  border-bottom: 1px solid #ccc !important;
+  border-bottom: 2px solid #c9c4c4 !important;
   margin-top: 10px !important;
   width: 100% !important;
 }
@@ -143,8 +144,8 @@
 
 // /* Link Name */
 .sidebar .nav-links li a .link_name {
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   color: rgb(174, 171, 171);
   transition: all 0.4s ease;
 }

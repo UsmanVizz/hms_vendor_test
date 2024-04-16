@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
-import { InputSwitchModule } from 'primeng/inputswitch';
+// import { InputSwitchModule } from 'primeng/inputswitch';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   OnInit,
   AfterViewInit,
 } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+// import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 
 declare interface JQuery<TElement extends HTMLElement> {
   carousel(): JQuery<TElement>;
@@ -18,7 +18,7 @@ declare let $: any;
 @Component({
   selector: 'app-catagories',
   standalone: true,
-  imports: [CommonModule, ButtonModule, InputSwitchModule, FormsModule],
+  imports: [CommonModule,],
   templateUrl: './catagories.component.html',
   styleUrls: ['./catagories.component.scss'],
 })

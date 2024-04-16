@@ -41,14 +41,24 @@
 }
 
 .forgot-password {
-  margin-left: 80px;
   font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  text-align: right !important;
-  color: #b7b7b7;
-  // float: right !important;
+  cursor: pointer;
 }
+
+.forgot-password:hover {
+  text-decoration: underline #aaaaaa;
+}
+
+.input-size {
+  font-size: 14px !important;
+  transition: 0.4s;
+}
+
+.input-size:focus {
+  outline: none !important;
+  border: 1px solid #34a5da !important;
+}
+
 h1 {
   padding: 0;
   margin: 0;

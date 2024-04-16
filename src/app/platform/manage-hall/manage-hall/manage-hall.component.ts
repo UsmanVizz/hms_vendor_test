@@ -1,9 +1,6 @@
 import { Component, OnInit,AfterViewInit  } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardModule } from 'primeng/card';
 import { Router } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { PaginatorModule } from 'primeng/paginator';
 interface PageEvent {
   first: number;
   rows: number;
@@ -15,7 +12,7 @@ interface PageEvent {
   templateUrl: './manage-hall.component.html',
   styleUrls: ['./manage-hall.component.scss'],
   standalone: true,
-  imports: [CommonModule, CardModule, ButtonModule, PaginatorModule],
+  imports: [CommonModule],
 })
 export class ManageHallComponent implements OnInit, AfterViewInit {
   first: number = 0;

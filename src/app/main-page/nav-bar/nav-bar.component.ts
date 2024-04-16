@@ -7,6 +7,7 @@ import {
 } from '@angular/common';
 import { Router } from '@angular/router';
 import { valueOrDefault } from 'chart.js/dist/helpers/helpers.core';
+// import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-nav-bar',
@@ -20,6 +21,7 @@ export class NavBarComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
   title: string;
+  showUserProfileMenu: boolean = false;
 
   constructor(
     location: Location,
@@ -137,6 +139,12 @@ export class NavBarComponent implements OnInit {
 
     return title;
   }
+
+  toggleUserProfileMenu() {
+    this.showUserProfileMenu = !this.showUserProfileMenu;
+    console.log('showUserProfileMenu:', this.showUserProfileMenu);
+  }
+
   // getTitle() {
   //   var titlee = this.location.prepareExternalUrl(this.location.path());
   //   if (titlee.charAt(0) === '#') {

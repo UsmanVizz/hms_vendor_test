@@ -1,16 +1,16 @@
 import { Component, ViewChild, ElementRef,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InputSwitchModule } from 'primeng/inputswitch';
-import { ButtonModule } from 'primeng/button';
-import { CardModule } from 'primeng/card';
-import { DialogModule } from 'primeng/dialog';
+// import { InputSwitchModule } from 'primeng/inputswitch';
+// import { ButtonModule } from 'primeng/button';
+// import { CardModule } from 'primeng/card';
+// import { DialogModule } from 'primeng/dialog';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
   standalone: true,
-  imports: [CommonModule, InputSwitchModule, ButtonModule, CardModule,DialogModule],
+  imports: [CommonModule],
 })
 export class MenuComponent implements OnInit{
   constructor(private router: Router) {}

@@ -19,16 +19,66 @@ agm-map {
 .card-body p-chart {
   height: 200px !important;
 }
+// .image-container {
+//   max-width: 100%; 
+//   overflow: hidden; 
+//   display: flex; 
+//   justify-content: center; 
+//   align-items: center; 
+// }
 
+// .image-container img {
+//   width: 100%; 
+//   height: 15vh; 
+// }
+.image-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius:10px;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 15vh;
+}
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 57%; 
+  background: #780548;
+
+  ; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-overlay .card {
+  top:  30%;
+  height:100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 172px;
+right: 330px;
+gap: 0px;
+opacity: 0px;
+}
+
+.color-overlay .card img {
+  max-width: 100%; 
+  height: auto; 
+  display: block; 
+}
 #chartContainer {
   width: 100%;
-  /* Set container width to fill its parent */
   height: 400px;
-  /* Set container height as needed */
   position: relative;
-  /* Ensure canvas can be positioned relative to its container */
   overflow: hidden;
-  /* Hide any overflowing content */
 }
 
 #myChart {
@@ -36,25 +86,19 @@ agm-map {
   height: 100%;
 }
 
-.header {
-  height: 170px;
-  // margin-left:-35px;
-  // padding-left:0px;
-  // margin-bottom: 30px !important;
-  background-image: linear-gradient(
-    to right,
-    rgb(250, 122, 243),
-    rgb(109, 178, 228),
-    rgb(158, 207, 243),
-    rgb(245, 120, 239),
-    rgb(72, 0, 72)
-  ) !important;
-}
+// .header {
+//   height: 170px;
+//   // margin-left:-35px;
+//   // padding-left:0px;
+//   // margin-bottom: 30px !important;
+// }
 
 .card1 {
   margin-top: 30%;
   height: 80%;
+  // width: calc(100% / 6);
   width: 90%;
+  border:none;
   box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
   border-radius: 6px;
   backdrop-filter: blur(5px);
@@ -65,17 +109,19 @@ agm-map {
   line-height: 3p;
   margin-left: 2%;
 }
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .card1 {
-    margin-top: 30%;
-    height: 158px;
-    width: 204px;
-    box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
-    border-radius: 5px;
-    backdrop-filter: blur(5px);
-    background-color: rgba(255, 255, 255, 0.745);
-    gap: 10px;
-    margin-left: 5%;
-  }
+.card{
+  box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
 }
+// @media (min-width: 768px) and (max-width: 1023px) {
+//   .card1 {
+//     // margin-top: 30%;
+//     // height: 158px;
+//     // width: 204px;
+//     // box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
+//     // border-radius: 5px;
+//     // backdrop-filter: blur(5px);
+//     // background-color: rgba(255, 255, 255, 0.745);
+//     // gap: 10px;
+//     // margin-left: 5%;
+//   }
+// }

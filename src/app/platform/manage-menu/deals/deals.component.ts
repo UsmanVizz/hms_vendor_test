@@ -1,19 +1,19 @@
 import { CommonModule } from '@angular/common';
-import { InputSwitchModule } from 'primeng/inputswitch';
+// import { InputSwitchModule } from 'primeng/inputswitch';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   OnInit,
   AfterViewInit,
 } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
+// import { ButtonModule } from 'primeng/button';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-deals',
   templateUrl: './deals.component.html',
   styleUrls: ['./deals.component.scss'],
-  standalone: true, imports: [CommonModule, ButtonModule, InputSwitchModule, FormsModule],
+  standalone: true, imports: [CommonModule,],
 })
 export class DealsComponent implements OnInit, AfterViewInit {
   constructor(private router: Router) {}
