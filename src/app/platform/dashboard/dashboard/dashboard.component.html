@@ -135,7 +135,7 @@
 <div class="container-fluid" style="margin-top: 7rem !important">
   <div class="row">
     <div class="col-lg-6">
-      <div class="card w-100 bg-white" style="height: 350px; background: white;border: none;">
+      <div class="card w-100 bg-white" style=" background: white;border: none;">
         <div class="card-header bg-white pt-4 d-flex align-items-start">
           <h3 class="card-title text-black" style="font-size: 20px">Revenue</h3>
           <select
@@ -158,6 +158,8 @@
           </select>
         </div>
         <div class="card-body p-3">
+          <canvas #chartCanvas2 class="chartcanvas"></canvas>
+
           <!-- <p-chart
             type="line"
             [data]="chart2Data"
@@ -169,7 +171,7 @@
       </div>
     </div>
     <div class="col-lg-6">
-      <div class="card w-100" style="height: 350px;border: none;">
+      <div class="card w-100" style="border: none;">
         <div class="card-header pt-4 d-flex align-items-start bg-white">
           <h3 class="card-title text-black" style="font-size: 17px">
             Customer
@@ -194,6 +196,7 @@
           </select>
         </div>
         <div class="card-body p-3">
+          <canvas #chartCanvas3></canvas>
           <!-- <p-chart
             type="bar"
             [data]="chart3Data"
@@ -208,7 +211,7 @@
 
   <div class="row mt-5 mb-5">
     <div class="col-md-8">
-      <div class="card flex justify-content-center" style="height: 350px;border: none;">
+      <div class="card flex justify-content-center" style="height:350px !important;border: none;">
         <div class="card-header bg-white pt-4 border-0">
           <h3 class="card-title text-black" style="font-size: 20px">
             Geo Location Graph
@@ -231,23 +234,16 @@
       </div>
     </div>
     <div class="col-md-4">
-      <div class="card" style="height: 350px;border: none;">
+      <div class="card" style="border: none; height: 350px !important;">
         <div class="card-header bg-white p-3">
-          <h3 class="card-title text-black" style="font-size: 18px;">
-            Geo Location Graph
-          </h3>
-          <p style="font-size: 20px">546576764</p>
+          <h3 class="card-title text-black" style="font-size: 18px;">Geo Location Graph</h3>
+          <p style="font-size: 20px;">546576764</p>
         </div>
-        <div class="card-body pb-0" style="overflow: hidden;">
-          <!-- <p-chart
-            type="pie"
-            [data]="chart1Data"
-            [options]="chart1Options"
-            width="230"
-            height="230"
-          ></p-chart> -->
+        <div class="card-body pb-0" style="overflow: hidden; display: flex; justify-content: center; align-items: center;">
+          <canvas #chartCanvas1></canvas>
         </div>
       </div>
     </div>
+    
   </div>
 </div>

@@ -15,10 +15,6 @@ agm-map {
   border: none;
   box-shadow: 0 0px 60px rgba(129, 124, 124, 0.2);
 }
-
-.card-body p-chart {
-  height: 200px !important;
-}
 // .image-container {
 //   max-width: 100%; 
 //   overflow: hidden; 
@@ -81,9 +77,8 @@ opacity: 0px;
   overflow: hidden;
 }
 
-#myChart {
-  width: 100%;
-  height: 100%;
+ .myChart {
+  height: 70% !important; width: 100% !important;
 }
 
 // .header {
@@ -111,6 +106,11 @@ opacity: 0px;
 }
 .card{
   box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
+height:100% !important
+}
+.chartcanvas{
+  height:100% !important;
+  width:100% !important;
 }
 // @media (min-width: 768px) and (max-width: 1023px) {
 //   .card1 {

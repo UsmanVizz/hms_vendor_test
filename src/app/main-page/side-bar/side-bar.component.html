@@ -1,4 +1,8 @@
-<nav id="sidebarMenu" class=" d-lg-block sidebar  bg-white" [class.show-on-mobile]="isMobileMenu()">
+<nav
+  id="sidebarMenu"
+  class="d-lg-block sidebar bg-white"
+  [class.show-on-mobile]="isMobileMenu()"
+>
   <div class="position-sticky">
     <div class="app-main">
       <div class="app-sidebar">
@@ -10,16 +14,19 @@
         </div>
         <hr class="separator" />
         <div class="container pt-3">
-        <div class="navigation" style="overflow:x-axis">
+          <div class="navigation" style="overflow: x-axis">
             <ul class="nav-links" id="nav-links">
               <li
                 *ngFor="let item of menuItems"
                 #itemEl
                 routerLinkActive="active"
               >
-                <div *ngIf="item.subItems?.length == 0" class="dropdown-title" >
+                <div *ngIf="item.subItems?.length == 0" class="dropdown-title">
                   <a [routerLink]="[item.routerLink]">
                     <i [class]="item.iconClass"></i>
+                    <span class="material-symbols-outlined">{{
+                      item.iconClass
+                    }}</span>
                     <span class="link_name">{{ item.title }}</span>
                   </a>
                 </div>
@@ -29,7 +36,9 @@
                   (click)="showSubmenu(itemEl)"
                 >
                   <a>
-                    <i [class]="item.iconClass"></i>
+                    <span class="material-symbols-outlined">{{
+                      item.iconClass
+                    }}</span>
                     <span class="link_name">{{ item.title }}</span>
                   </a>
                   <i class="bx bxs-chevron-down arrow"></i>

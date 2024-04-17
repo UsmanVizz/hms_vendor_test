@@ -1,12 +1,6 @@
-<!-- <div class="d-flex align-items-center" style="margin-top: 100px">
+<div class="d-flex align-items-center" style="margin-top: 100px">
   <h1
-    class="text-black flex-grow-1 mb-0"
-    style="
-      font-size: 18px;
-      font-weight: 700;
-      color: black;
-      font-family: Plus Jakarta Sans;
-    "
+    class="text-black flex-grow-1 mb-0 fs-18 fw-700"
   >
     All Hall
   </h1>
@@ -34,40 +28,47 @@
     </button>
   </div>
 </div>
-<div class="card-container" style="margin-top: 30px">
-  <div class="card" *ngFor="let data of cardData" (click)="navigateToDetail(data)">
-    <p-card>
-      <ng-template pTemplate="header">
-        <img [src]="data.imageUrl" class="card-img" alt="..." />
-      </ng-template>
-      <div class="d-flex align-items-center text-black">
-        <h5 class="card-location flex-grow-1 mb-0">All Halls</h5>
-        <span>
-          <h5 class="card-location flex-grow-1 mb-0">
-            <span style="color: grey">Price</span> {{ data.price }}
-          </h5>
-        </span>
-      </div>
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-container">
+        <div class="card mb-4" *ngFor="let data of cardData" (click)="navigateToDetail(data)">
+          <div class="card-header p-0" >
+            <img [src]="data.imageUrl" class="card-img" alt="..." />
+          </div>
+          <div class="card-body p-4">
 
-      <p class="m-0">{{ data.description }}</p>
-      <div class="d-flex align-items-center text-black">
-        <h5 class="card-location flex-grow-1 mb-0">
-          <i class="fas fa-map-marker-alt"></i>{{ data.location }}
-        </h5>
-        <span>
-          <h5 class="card-location flex-grow-1 mb-0">
-            <i class="fas fa-university"></i>{{ data.hall }}
-          </h5>
-        </span>
+            <div class="d-flex align-items-center">
+              <h5 class="card-location flex-grow-1 mb-0">All Halls</h5>
+              <span>
+                <h5 class="card-location flex-grow-1 mb-0  ">
+                <span class="text-secondary mx-2">Price: </span>   {{ data.price }}
+                </h5>
+              </span>
+            </div>
+            <p class="card-text">{{ data.description }}</p>
+            <div class="d-flex align-items-center">
+              <h5 class="card-location flex-grow-1 mb-0">
+                <i class="fas fa-map-marker-alt"></i> {{ data.location }}
+              </h5>
+              <span>
+                <h5 class="card-location flex-grow-1 mb-0">
+                  <i class="fas fa-university"></i> {{ data.hall }}
+                </h5>
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-    </p-card>
+    </div>
   </div>
 </div>
+
 <div class="card flex justify-content-end mt-5">
-  <p-paginator
+  <!-- <p-paginator
     (onPageChange)="onPageChange($event)"
     [first]="first"
     [rows]="rows"
     [totalRecords]="120"
-  ></p-paginator>
-</div> -->
+  ></p-paginator> -->
+</div>

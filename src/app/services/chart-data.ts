@@ -1,4 +1,3 @@
-// Component for the first chart
 export const chart1Data = () => {
   const documentStyle = getComputedStyle(document.documentElement);
   const textColor = documentStyle.getPropertyValue('--text-color');
@@ -21,7 +20,7 @@ export const chart1Data = () => {
     options: {
       plugins: {
         legend: {
-          position: 'bottom',
+          position: 'bottom', // Position the legend at the bottom
           labels: {
             usePointStyle: true,
             color: textColor,
@@ -59,7 +58,6 @@ export const chart2Data = () => {
         label: 'Vendor',
         fill: false,
         borderColor: '#622CAD',
-        yAxisID: 'y1',
         tension: 0.4,
         data: [28, 48, 40, 19, 86, 27, 90],
       },

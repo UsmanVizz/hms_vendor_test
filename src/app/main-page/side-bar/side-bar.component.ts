@@ -32,31 +32,31 @@ export class SideBarComponent implements OnInit {
     {
       title: 'Dashboard',
       routerLink: 'dashboard',
-      iconClass: 'pi pi-th-large',
+      iconClass: 'grid_view ',
       subItems: [],
     },
 
     {
       title: 'Manage Branches',
       routerLink: 'branch-manage',
-      iconClass: 'pi pi-building',
+      iconClass: 'home_work',
       subItems: [],
     },
     {
       title: 'Manage Hall',
       routerLink: 'hall-manage',
-      iconClass: 'pi pi-building',
+      iconClass: 'domain',
       subItems: [],
     },
     {
       title: 'Orders Management',
       routerLink: 'order-manage',
-      iconClass: 'pi pi-building',
+      iconClass: 'contract',
       subItems: [],
     },
     {
       title: 'Manage Menu',
-      iconClass: 'pi pi-building',
+      iconClass: 'monetization_on',
       routerLink: null,
       subItems: [
         { title: 'Category', routerLink: 'catagories' },
@@ -68,37 +68,37 @@ export class SideBarComponent implements OnInit {
     {
       title: 'Manage Customer',
       routerLink: 'manage-customer',
-      iconClass: 'pi pi-user',
+      iconClass: 'person_pin',
       subItems: [],
     },
     {
       title: 'Vendors Management',
       routerLink: 'vandors',
-      iconClass: 'pi pi-building',
+      iconClass: 'clinical_notes',
       subItems: [],
     },
     {
       title: 'Finance Management',
       routerLink: 'expense-manage',
-      iconClass: 'pi pi-building',
+      iconClass: 'assured_workload',
       subItems: [],
     },
     {
       title: 'User Management',
       routerLink: 'user-management',
-      iconClass: 'pi pi-building',
+      iconClass: 'perm_contact_calendar',
       subItems: [],
     },
     {
       title: 'Reports',
       routerLink: 'salary-manage',
-      iconClass: 'pi pi-building',
+      iconClass: 'universal_currency',
       subItems: [],
     },
     {
       title: 'Profile',
       routerLink: 'profile',
-      iconClass: 'pi pi-user',
+      iconClass: 'person',
       subItems: [],
     },
   ];

@@ -1,3 +1,12 @@
+/* styles.css */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: " > ";
+}
+
+.breadcrumb {
+  font-size: 16px;
+}
+
 .card-title {
   color: black;
   font-size: 17px;
@@ -37,10 +46,10 @@
   cursor: pointer;
 }
 .card-footer {
-  position: -webkit-sticky; 
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  z-index: 999; 
+  z-index: 999;
 }
 
 .card-text {
@@ -91,7 +100,7 @@
 .card {
   display: flex;
   width: calc(100% - 12px);
-  border-radius:0
+  border-radius: 0;
   // height: 236px;
 }
 
