@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-profile',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
 })
-export class ProfileComponent {
+export class ProfileComponent implements OnInit {
+  constructor() {}
 
+  ngOnInit(): void {}
 }

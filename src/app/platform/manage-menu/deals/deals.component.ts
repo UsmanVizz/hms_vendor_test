@@ -13,17 +13,20 @@ import { Router } from '@angular/router';
   selector: 'app-deals',
   templateUrl: './deals.component.html',
   styleUrls: ['./deals.component.scss'],
-  standalone: true, imports: [CommonModule,],
+  standalone: true,
+  imports: [CommonModule],
 })
-export class DealsComponent implements OnInit, AfterViewInit {
-  constructor(private router: Router) {}
-  ngOnInit(): void {}
+export class DealsComponent implements OnInit {
   checked: boolean = false;
-  ngAfterViewInit(): void {}
+  activeIndex: number = 0;
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {}
+
   navigateToAddDeal() {
     this.router.navigate(['hms-main/add-deal']);
   }
-  activeIndex: number = 0;
 
   setActiveIndex(index: number) {
     this.activeIndex = index;
@@ -35,10 +38,11 @@ export class DealsComponent implements OnInit, AfterViewInit {
       title: 'Deal Name',
       text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
-      dealText: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
-      standardRate:'Rs 300',
-discountRate:'Rs 200',
-      
+      dealText:
+        'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
+      standardRate: 'Rs 300',
+      discountRate: 'Rs 200',
+
       checked: false,
       isChecked: false,
       buttons: [
@@ -57,9 +61,10 @@ discountRate:'Rs 200',
       title: 'Deal Name',
       text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
-      dealText: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
-      standardRate:'Rs 300',
-discountRate:'Rs 200',   
+      dealText:
+        'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
+      standardRate: 'Rs 300',
+      discountRate: 'Rs 200',
       checked: false,
       isChecked: false,
       buttons: [
@@ -75,12 +80,14 @@ discountRate:'Rs 200',
     },
     {
       imageUrl: 'assets/food/images/food-2.jpg',
-     title: 'Deal Name',
+      title: 'Deal Name',
       text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
-      dealText: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
-      standardRate:'Rs 300',
-discountRate:'Rs 200', checked: false,
+      dealText:
+        'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
+      standardRate: 'Rs 300',
+      discountRate: 'Rs 200',
+      checked: false,
       isChecked: false,
       buttons: [
         { icon: 'pi pi-filter', severity: 'secondary' },
@@ -95,12 +102,14 @@ discountRate:'Rs 200', checked: false,
     },
     {
       imageUrl: 'assets/food/images/food-2.jpg',
-     title: 'Deal Name',
+      title: 'Deal Name',
       text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
-      dealText: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
-      standardRate:'Rs 300',
-discountRate:'Rs 200', checked: false,
+      dealText:
+        'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
+      standardRate: 'Rs 300',
+      discountRate: 'Rs 200',
+      checked: false,
       isChecked: false,
       buttons: [
         { icon: 'pi pi-filter', severity: 'secondary' },
@@ -115,12 +124,14 @@ discountRate:'Rs 200', checked: false,
     },
     {
       imageUrl: 'assets/food/images/food-2.jpg',
-     title: 'Deal Name',
+      title: 'Deal Name',
       text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
-      dealText: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
-      standardRate:'Rs 300',
-discountRate:'Rs 200', checked: false,
+      dealText:
+        'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
+      standardRate: 'Rs 300',
+      discountRate: 'Rs 200',
+      checked: false,
       isChecked: false,
       buttons: [
         { icon: 'pi pi-filter', severity: 'secondary' },
@@ -138,9 +149,10 @@ discountRate:'Rs 200', checked: false,
       title: 'Deal Name',
       text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
-      dealText: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
-      standardRate:'Rs 300',
-discountRate:'Rs 200', 
+      dealText:
+        'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
+      standardRate: 'Rs 300',
+      discountRate: 'Rs 200',
       checked: false,
       isChecked: false,
       buttons: [
@@ -155,6 +167,4 @@ discountRate:'Rs 200',
       ],
     },
   ];
-
 }
-

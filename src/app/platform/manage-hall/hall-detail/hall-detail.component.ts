@@ -1,12 +1,12 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {CommonModule} from '@angular/common'
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-hall-detail',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './hall-detail.component.html',
-  styleUrls: ['./hall-detail.component.scss']
+  styleUrls: ['./hall-detail.component.scss'],
 })
 export class HallDetailComponent implements OnInit {
   data: any;

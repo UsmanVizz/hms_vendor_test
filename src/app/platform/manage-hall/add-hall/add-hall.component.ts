@@ -9,19 +9,23 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
 })
 export class AddHallComponent implements OnInit {
+  title: string;
+  description: string;
+  uploadedImages: any[] = [];
+
   images = [
     { src: 'assets/images/img.jpg', alt: 'Description of image 1' },
     { src: 'assets/images/img.jpg', alt: 'Description of image 2' },
     { src: 'assets/images/img.jpg', alt: 'Description of image 3' },
   ];
-  title: string;
-  description: string;
-  uploadedImages: any[] = [];
+
   constructor() {
     this.title = '';
     this.description = '';
   }
+
   ngOnInit(): void {}
+
   onFileSelected(event: any) {
     const files = event.target.files;
     if (files) {

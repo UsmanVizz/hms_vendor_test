@@ -18,19 +18,21 @@ declare let $: any;
 @Component({
   selector: 'app-catagories',
   standalone: true,
-  imports: [CommonModule,],
+  imports: [CommonModule],
   templateUrl: './catagories.component.html',
   styleUrls: ['./catagories.component.scss'],
 })
-export class CatagoriesComponent implements OnInit, AfterViewInit {
-  constructor(private router: Router) {}
-  ngOnInit(): void {}
+export class CatagoriesComponent implements OnInit {
   checked: boolean = false;
-  ngAfterViewInit(): void {}
+  activeIndex: number = 0;
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {}
+
   navigateToAddCategory() {
     this.router.navigate(['hms-main/add-category']);
   }
-  activeIndex: number = 0;
 
   setActiveIndex(index: number) {
     this.activeIndex = index;
@@ -40,12 +42,12 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: ' a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
         { icon: 'pi pi-trash', severity: 'secondary' },
         { icon: 'pi pi-eye', severity: 'secondary' },
       ],
@@ -58,12 +60,12 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: ' Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
         { icon: 'pi pi-trash', severity: 'secondary' },
         { icon: 'pi pi-eye', severity: 'secondary' },
       ],
@@ -76,12 +78,12 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: 'a Latin scholar from Hampden-Sydney Collegfrom Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
         { icon: 'pi pi-trash', severity: 'secondary' },
         { icon: 'pi pi-eye', severity: 'secondary' },
       ],
@@ -94,12 +96,12 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: 'a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
         { icon: 'pi pi-trash', severity: 'secondary' },
         { icon: 'pi pi-eye', severity: 'secondary' },
       ],
@@ -112,12 +114,12 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: ' a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
         { icon: 'pi pi-trash', severity: 'secondary' },
         { icon: 'pi pi-eye', severity: 'secondary' },
       ],
@@ -130,12 +132,12 @@ export class CatagoriesComponent implements OnInit, AfterViewInit {
     {
       imageUrl: 'assets/food/images/food-1.jpg',
       title: 'Menu Category Name 2',
-      text: 'Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: 'a Latin scholar from Hampden-Sydney  from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
         { icon: 'pi pi-trash', severity: 'secondary' },
         { icon: 'pi pi-eye', severity: 'secondary' },
       ],

@@ -10,16 +10,9 @@ import { RouterModule } from '@angular/router';
   imports: [CommonModule, RouterModule],
 })
 export class AddBranchComponent implements OnInit {
-
-  title: string;
-  description: string;
-
   uploadedImages: any[] = [];
 
-  constructor() {
-    this.title = '';
-    this.description = '';
-  }
+  constructor() {}
 
   ngOnInit(): void {}
 

@@ -1,7 +1,13 @@
-.card {
-  padding: 20px;
-  margin: 30px;
+.card{
+  padding:20px;
+  margin:30px;
+  display: flex;
+  border:none;
+  width: calc(97.333% - 100px);
+  height: calc(112.4% - 100px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .br-decription {
   padding-top: 10px;
   font-family: Inter;
@@ -62,6 +68,8 @@ input[type="text"] {
   width: 32%;
   height: 43px;
   font-size: 15px;
+  color:white;
+  background-color: blue;
 }
 #inputDescription {
   width: 90%;
@@ -99,7 +107,7 @@ input[type="text"] {
   background-color: #ececec;
   color: #fff;
   border-radius: 10px;
-  border: 1px dashed #000000;
+  border: 1px dashed #7E7E7E;
 }
 .mx-5{
   margin-left:6rem !important;
@@ -147,4 +155,31 @@ input[type="text"] {
 /* Hide file input text */
 input[type="file"] {
   display: none;
+}
+.custom-button {
+  border: none;
+  background-color: #1814f3;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+ font-size: 16px;
+ margin-right:12rem !important;
+}
+.breadcrumb{
+  font-size: 15px;
+  margin-left:3rem !important;
+  text-decoration: none !important;
+}
+.breadcrumb a{
+  text-decoration: none;
+}
+.images-slider{
+font-family: Plus Jakarta Sans;
+font-size: 18px;
+font-weight: 700;
+line-height: 27px;
+letter-spacing: -0.03em;
+text-align: left;
+color: #B1B1B1;
+margin-left:7rem !important;
 }

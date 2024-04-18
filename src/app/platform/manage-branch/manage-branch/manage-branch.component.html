@@ -1,21 +1,4 @@
-<div class="mt-3 mb-4">
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
-        <a
-          routerLink="/hms-main/branch-manage"
-          class="d-flex gap-2 align-items-center text-decoration-none"
-        >
-          <span class="material-symbols-outlined"> room_preferences </span
-          >Manage Branch</a
-        >
-      </li>
-      <li class="breadcrumb-item active" aria-current="page">Add Hall</li>
-    </ol>
-  </nav>
-</div>
-
-<div class="d-flex align-items-center" style="margin-top: 100px">
+<div class="d-flex align-items-center" style="margin-top: 40px">
   <h1
     class="text-black flex-grow-1 mb-0"
     style="
@@ -40,7 +23,7 @@
 <div class="d-flex align-items-center justify-content-center mt-5 mx-2">
   <div class="ml-auto">
     <button class="mx-2 sort-button" type="button">
-      <i class="pi pi-search"></i>
+      <i class="fas fa-search"></i>
     </button>
     <button class="mx-2 sort-button" type="button">
       <i class="fas fa-bars"> Sort All</i>
@@ -92,13 +75,11 @@
                 {{ category.branch_name }}
               </h5>
               <span>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-ellipsis-h"
-                  severity="secondary"
-                  [outlined]="true"
-                  (click)="navigateToDetail(category)"
-                ></p-button>
+                <button 
+    class="btn btn-outline-secondary m-2" >
+    <i class="fas fa-ellipsis-h"></i>
+</button>
+
               </span>
             </div>
             <p class="card-text">{{ category.branch_description }}</p>

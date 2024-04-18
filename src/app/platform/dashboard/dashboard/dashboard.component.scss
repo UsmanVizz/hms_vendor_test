@@ -16,22 +16,22 @@ agm-map {
   box-shadow: 0 0px 60px rgba(129, 124, 124, 0.2);
 }
 // .image-container {
-//   max-width: 100%; 
-//   overflow: hidden; 
-//   display: flex; 
-//   justify-content: center; 
-//   align-items: center; 
+//   max-width: 100%;
+//   overflow: hidden;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 // }
 
 // .image-container img {
-//   width: 100%; 
-//   height: 15vh; 
+//   width: 100%;
+//   height: 15vh;
 // }
 .image-container {
   position: relative;
   overflow: hidden;
   max-width: 100%;
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 .image-container img {
@@ -44,31 +44,30 @@ agm-map {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 57%; 
+  width: 57%;
   background: #780548;
 
-  ; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .color-overlay .card {
-  top:  30%;
-  height:100%;
+  top: 30%;
+  height: 100%;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
   width: 172px;
-right: 330px;
-gap: 0px;
-opacity: 0px;
+  right: 330px;
+  gap: 0px;
+  opacity: 0px;
 }
 
 .color-overlay .card img {
-  max-width: 100%; 
-  height: auto; 
-  display: block; 
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 #chartContainer {
   width: 100%;
@@ -77,8 +76,9 @@ opacity: 0px;
   overflow: hidden;
 }
 
- .myChart {
-  height: 70% !important; width: 100% !important;
+.myChart {
+  height: 70% !important;
+  width: 100% !important;
 }
 
 // .header {
@@ -93,7 +93,7 @@ opacity: 0px;
   height: 80%;
   // width: calc(100% / 6);
   width: 90%;
-  border:none;
+  border: none;
   box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
   border-radius: 6px;
   backdrop-filter: blur(5px);
@@ -104,13 +104,13 @@ opacity: 0px;
   line-height: 3p;
   margin-left: 2%;
 }
-.card{
+.card {
   box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
-height:100% !important
+  height: 100% !important;
 }
-.chartcanvas{
-  height:100% !important;
-  width:100% !important;
+.chartcanvas {
+  height: 100% !important;
+  width: 100% !important;
 }
 // @media (min-width: 768px) and (max-width: 1023px) {
 //   .card1 {

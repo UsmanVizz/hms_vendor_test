@@ -1,20 +1,25 @@
-import { HttpClient, HttpErrorResponse, HttpHeaders, HttpResponse } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpHeaders,
+  HttpResponse,
+} from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface ApiResponse {
   status: number;
-  error?: string,
-  message: string,
-  err?: string,
-  data?: any
+  error?: string;
+  message: string;
+  err?: string;
+  data?: any;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpClient, private router: Router,) { }
+  constructor(private http: HttpClient, private router: Router) {}
 
   public get(url: string) {
     return this.http.get<ApiResponse>(url);
@@ -32,18 +37,15 @@ export class ApiService {
     return this.http.patch<ApiResponse>(url, postData);
   }
 
-
   public handleError(error: any) {
     if (error instanceof HttpErrorResponse) {
       const e: ApiResponse = {
         status: error.status,
         error: error.statusText,
-        message: error.error['message']
-      }
+        message: error.error['message'],
+      };
 
       error = e;
     }
   }
-
-
 }

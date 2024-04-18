@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-vandors-management',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './vandors-management.component.html',
-  styleUrls: ['./vandors-management.component.scss']
+  styleUrls: ['./vandors-management.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
 })
-export class VandorsManagementComponent {
+export class VandorsManagementComponent implements OnInit {
+  constructor() {}
 
+  ngOnInit(): void {}
 }

@@ -1,76 +1,106 @@
-<div class="container">
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-8"> 
-        <div class="card" *ngIf="data" >
-          <div class="row no-gutters">
-            <div class="d-flex align-items-center" >
-              <h1
-                class="text-black flex-grow-1 mb-0"
-                style="
-                  font-size: 18px;
-                  font-weight: 700;
-                  color: black;
-                  font-family: Plus Jakarta Sans;
-                "
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="card" *ngIf="data">
+        <div class="row no-gutters">
+          <div class="d-flex align-items-center">
+            <h1
+              class="text-black flex-grow-1 mb-0"
+              style="
+                font-size: 18px;
+                font-weight: 700;
+                color: black;
+                font-family: Plus Jakarta Sans;
+              "
+            >
+              A1 Hall
+            </h1>
+            <div class="ml-auto">
+              <button
+                class="custom-button"
+                style="background-color: blue; font-size: 16px"
               >
-             A1 Hall
-              </h1>
-              <div class="ml-auto">
-                <button
-                  class="custom-button"
-                  style="background-color: blue; font-size: 16px"
-                 
-                >
-                 Edit Hall
-                </button>
-              </div>
+                Edit Hall
+              </button>
             </div>
-            <div class="image-container">
-              <img [src]="data.imageUrl" alt="..." />
-            </div>
-            <div class="text-container">
-              <h4 classs="mt-4">Hall</h4>
-              <div class="info-container">
-               
-                <div class="info-item">
-                    <p class="info-label">Title</p>
-                    <p class="info-value">{{ data.title }}</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label">Description</p>
-                    <p class="info-value">{{ data.description }}</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label">City</p>
-                    <p class="info-value">{{ data.city}}</p>
-                </div>
-                <div class="info-item">
-                  <p class="info-label">Area</p>
-                  <p class="info-value">{{ data.area }}</p>
-              </div>
-             
-            <div class="info-item">
-              <p class="info-label">Parking Capacity</p>
-              <p class="info-value">{{ data.capacity }}</p>
           </div>
-          <div class="info-item">
-            <p class="info-label">Special Attractions</p>
-            <p class="info-value">{{ data.attraction }}</p>
-        </div>
-        <div class="info-item">
-          <p class="info-label">Address on Map</p>
-          <p class="info-value">{{ data.map }}</p>
-      </div>
-     
-    <div class="info-item">
-      <p class="info-label">Address</p>
-      <p class="info-value">{{ data.address }}</p>
-  </div>
-  <div class="info-item">
-    <p class="info-label">Venus Owner</p>
-    <p class="info-value">{{ data.owner}}</p>
-</div>
+          <div class="image-container">
+            <img [src]="data.imageUrl" alt="..." />
+          </div>
+          <div class="text-container">
+            <h4 classs="mt-4">Hall</h4>
+            <div class="info-container mt-5">
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fa-solid fa-t"></i>
+                  <p class="info-label">Title</p>
+                </span>
+
+                <p class="info-value">{{ data.title }}</p>
+              </div>
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fa-thin fa-file-lines"></i>
+                  <p class="info-label">Description</p>
+                </span>
+                <p class="info-value">{{ data.description }}</p>
+              </div>
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fa-university"></i>
+                  <p class="info-label">Branch</p>
+                </span>
+
+                <p class="info-value">{{ data.city }}</p>
+              </div>
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fa-solid fa-t"></i>
+                  <p class="info-label">Area</p>
+                </span>
+                <p class="info-value">{{ data.area }}</p>
+              </div>
+
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fa-solid fa-car-side"></i>
+                  <p class="info-label">Parking Capacity</p>
+                </span>
+                <p class="info-value">{{ data.capacity }}</p>
+              </div>
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fa-building"></i>
+                  <p class="info-label">Floor</p>
+                </span>
+
+                <p class="info-value">{{ data.attraction }}</p>
+              </div>
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fal fa-map"></i>
+                  <p class="info-label">Address on Map</p>
+                </span>
+                <p class="info-value">{{ data.map }}</p>
+              </div>
+
+              <div class="info-item">
+                <span class="icon-label">
+                  <i class="fas fal fa-location"></i>
+                  <p class="info-label">Address</p>
+                </span>
+                <p class="info-value">{{ data.address }}</p>
+              </div>
+              <div class="info-item">
+                <span class="icon-label">
+                  <p class="info-label">Price</p>
+                </span>
+                <p class="info-value">{{ data.owner }}</p>
+              </div>
             </div>
-            
-          </div></div></div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

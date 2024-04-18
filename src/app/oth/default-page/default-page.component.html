@@ -1,34 +1,21 @@
+<div class="h-100">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li
-      *ngFor="let data of slideData; let i = index"
-      [attr.data-target]="'#carousel-example-generic'"
-      [attr.data-slide-to]="i"
-      [class.active]="i === 0"
-    ></li>
+    <li *ngFor="let data of slideData; let i = index" [attr.data-target]="'#carousel-example-generic'"
+      [attr.data-slide-to]="i" [class.active]="i === 0"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div
-      *ngFor="let data of slideData; let i = index"
-      class="item"
-      [class.active]="i === 0"
-    >
-      <img [src]="data.backdropImag" alt="..." />
+    <div *ngFor="let data of slideData; let i = index" class="item" [class.active]="i === 0">
+      <img [src]="data.backdropImag" alt="..."  />
       <div class="carousel-caption">
         <div class="d-flex flex-column justify-content-start">
           <h3 class="col-xl-8 text-start h3-f-t">{{ data.paragraph }}</h3>
-          <div
-            class="d-flex gap-3 align-items-center justify-content-start float-start"
-          >
+          <div class="d-flex gap-3 align-items-center justify-content-start float-start">
             <p class="fw-bold">___</p>
-            <img
-              [src]="data.clientImage"
-              alt="image privew"
-              class="img-rounded__icon"
-            />
+            <img [src]="data.clientImage" alt="image privew" class="img-rounded__icon" />
             <p class="p-t fw-bold">
               {{ data.clientName }} from {{ data.address }}
             </p>
@@ -39,16 +26,7 @@
   </div>
 
   <!-- Controls -->
-  <a
-    class="left carousel-control"
-    href="#carousel-example-generic"
-    role="button"
-    data-slide="prev"
-  ></a>
-  <a
-    class="right carousel-control"
-    href="#carousel-example-generic"
-    role="button"
-    data-slide="next"
-  ></a>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"></a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"></a>
+</div>
 </div>

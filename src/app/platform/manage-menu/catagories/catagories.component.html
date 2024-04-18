@@ -1,4 +1,13 @@
-<div class="d-flex align-items-center category" style="margin-top: 100px">
+<div class="d-flex justify-content-between mt-5">
+  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="#"><i class="fas fa-light fa-city mx-3"></i>Manage Menu</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Category</li>
+      </ol>
+    </nav>
+</div>
+
+<div class="d-flex align-items-center category" style="margin-top: 30px">
   <h1
     class="text-black flex-grow-1 mb-0"
     style="
@@ -23,7 +32,7 @@
 <div class="d-flex align-items-center mt-5 mx-2">
   <div class="ml-auto">
     <button class="mx-2 sort-button" type="button">
-      <i class="pi pi-search"></i>
+      <i class="fas fa-search"></i>
     </button>
     <button class="mx-2 sort-button" type="button">
       <i class="fas fa-bars"> Sort All</i>
@@ -36,7 +45,7 @@
 </div>
 <div class="row" style="margin-top: 30px">
   <div class="col-sm-6 mb-3 mb-sm-0" *ngFor="let category of cards">
-    <div class="card" style="margin-bottom: 20px">
+    <div class="card border-0" style="margin-bottom: 20px">
       <div class="row no-gutters">
         <!-- Image Side -->
         <div class="image-container">
@@ -73,6 +82,11 @@
             <div class="d-flex align-items-center">
               <h5 class="card-title flex-grow-1 mb-0">{{ category.title }}</h5>
               <span>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                </div>
+                
+                <!-- <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"> -->
                 <!-- <p-inputSwitch [(ngModel)]="category.isChecked"></p-inputSwitch> -->
               </span>
             </div>
@@ -84,26 +98,18 @@
                   category.item
                 }}</span>
               </p>
-              <!-- <span>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-filter"
-                  severity="secondary"
-                  [outlined]="true"
-                ></p-button>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-trash"
-                  severity="secondary"
-                  [outlined]="true"
-                ></p-button>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-eye"
-                  severity="secondary"
-                  [outlined]="true"
-                ></p-button>
-              </span> -->
+              <div class="btn-group" role="group">
+                <button type="button" class="btn-button m-2">
+                  <i class="fas fa-filter"></i> 
+                </button>
+                <button type="button" class="btn-button m-2">
+                  <i class="fas fa-trash"></i>
+                </button>
+                <button type="button" class="btn-button m-2">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+              
             </div>
           </div>
         </div>

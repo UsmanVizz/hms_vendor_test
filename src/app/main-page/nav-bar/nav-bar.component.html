@@ -5,12 +5,7 @@
         <div>
           <label class="title-label">{{ getTitle() }}</label>
         </div>
-        <button
-          mat-raised-button
-          class="navbar-toggler"
-          type="button"
-          (click)="sidebarToggle()"
-        >
+        <button class="navbar-toggler" type="button" (click)="sidebarToggle()">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon icon-bar"></span>
           <span class="navbar-toggler-icon icon-bar"></span>
@@ -23,12 +18,8 @@
                 <div class="widget-content-left">
                   <div class="d-flex justify-content-end">
                     <div class="search-container mr-20">
-                      <input
-                        class="form-control me-2 searchbar"
-                        type="search"
-                        placeholder="Search for Something"
-                        aria-label="Search"
-                      />
+                      <input class="form-control me-2 searchbar" type="search" placeholder="Search for Something"
+                        aria-label="Search" />
                     </div>
                     <div class="ml-3 mx-2 d-flex align-items-center mr-20">
                       <div class="icon-circle">
@@ -47,10 +38,7 @@
                       <div class="user" (click)="toggleUserProfileMenu()">
                         <img src="assets/img.avif" alt="user profile" />
                       </div>
-                      <div
-                        class="dropdown-menu dropdown-menu-right"
-                        *ngIf="showUserProfileMenu"
-                      >
+                      <div class="dropdown-menu dropdown-menu-right" *ngIf="showUserProfileMenu">
                         <button class="dropdown-item">Logout</button>
                         <button class="dropdown-item">Settings</button>
                       </div>

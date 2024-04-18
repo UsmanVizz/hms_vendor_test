@@ -1,20 +1,26 @@
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 .card {
   display: block;
-  width: 100%;
   height: auto;
+  max-width: 320px;
 }
+
 ::ng-deep .p-button-secondary {
   border-radius: 6px;
   color: rgb(186, 180, 180);
   background: white !important;
   height: 33px !important;
   width: 30px;
+}
+
+.material-symbols-outlined {
+  font-size: 20px !important;
 }
 
 .custom-button {
@@ -24,26 +30,48 @@
   padding: 12px 16px;
   border-radius: 8px;
 }
+
 .sort-button {
   border: 1px solid #dddddd;
   background-color: #ffffff;
   color: #dddddd;
-
   padding: 12px 16px;
   border-radius: 8px;
 }
-.card-img{
-  height:20% !important;
-  width:100%;
+
+.search-btn {
+  padding: 4px 8px;
 }
-.card-text{
+
+.btn-text {
+  font-size: 16px;
+  color: #858585;
+  font-weight: 500;
+}
+
+.span-text__color {
+  color: #1814f3 !important;
+}
+
+.card-img {
+  height: 20% !important;
+  width: 100%;
+}
+
+.carousel-control__btn {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card-text {
   //styleName: Regular/Type@14;
-font-family: Plus Jakarta Sans;
-font-size: 14px;
-font-weight: 400;
-line-height: 21px;
-letter-spacing: -0.02em;
-text-align: left;
-color: #858585;
-padding:5px;
+  font-family: Plus Jakarta Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #858585;
+  padding: 5px;
 }
