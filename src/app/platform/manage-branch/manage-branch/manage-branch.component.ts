@@ -23,7 +23,7 @@ export class ManageBranchComponent implements OnInit {
     private router: Router,
     private apiService: ApiService,
     private manageService: ManageBranchService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getBranchData();
