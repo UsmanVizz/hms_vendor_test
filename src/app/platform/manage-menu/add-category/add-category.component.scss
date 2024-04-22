@@ -7,25 +7,7 @@
   height: calc(112.4% - 100px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.br-decription{
-    padding-top:10px;
-    font-family: Inter;
-font-size: 16px;
-font-weight: 400;
-margin-left: 60px;
-line-height: 19.36px;
-text-align: left;
-
-}
-.br-name{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.36px;
-    text-align: left;
-    margin-left: 60px;
-}
-.br-id{
+.branch{
     font-family: Inter;
     font-size: 16px;
     font-weight: 400;
@@ -33,22 +15,6 @@ text-align: left;
     line-height: 19.36px;
     text-align: left;
     
-}
-.add-address{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.36px;
-    margin-left: 60px;
-    text-align: left; 
-}
-.parking-capacity{
-    font-family: Inter;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19.36px;
-    margin-left: 60px;
-    text-align: left; 
 }
 input[type=text] {
     width:80%;
@@ -112,9 +78,8 @@ line-height: 27px;
     height: 100px; 
   }
 
-  .custom-file-upload {
+  .custom-thumbnail-upload {
     display: inline-block;
-    // margin-left:60px;
     padding: 35px 40px;
     cursor: pointer;
     background-color: #ececec;
@@ -122,6 +87,18 @@ line-height: 27px;
     width:100%;
     border-radius: 10px;
     border: 1px dashed #7E7E7E;
+  }
+
+  .custom-file-upload {
+    display: inline-block;
+    padding: 78px 92px;
+    cursor: pointer;
+    background-color: #ececec;
+    color: #fff;
+    width: 100%; 
+    height: 180px; 
+    border-radius: 10px;
+    border: 1px dashed #7e7e7e;
   }
   .mx-5{
     margin-left:6rem !important;
@@ -145,7 +122,22 @@ line-height: 27px;
     width: 100px;
     height: 100px;
   }
-  
+
+  .chip-img{
+    display: inline-block;
+    border-radius: 20px;
+    .close{
+      right: 16px;
+      top: -8px;
+      cursor: pointer;
+      font-weight: bold;
+      opacity: 1;
+      position: relative;
+    }
+    .object-fit-fill{
+      border-radius:10px;
+    }
+  }
   .chip img {
     vertical-align: middle;
     border-radius: 20px;
@@ -159,14 +151,13 @@ line-height: 27px;
     right: -4px;
     top: -109px;
   }
-  
+
   .material-symbols-outlined {
     color: #7e7e7e;
     font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24 !important;
     font-size: 24px !important;
   }
-  
-  /* Hide file input text */
+
   input[type="file"] {
     display: none;
   }
@@ -179,3 +170,6 @@ line-height: 27px;
     color: #B1B1B1;
     margin-left:6rem !important;
     }
+    .mt-1 {
+      margin-top: -6.75rem !important;
+  }

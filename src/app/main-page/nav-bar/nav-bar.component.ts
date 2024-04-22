@@ -6,7 +6,6 @@ import {
   PathLocationStrategy,
 } from '@angular/common';
 import { Router } from '@angular/router';
-import { valueOrDefault } from 'chart.js/dist/helpers/helpers.core';
 // import { MenuItem } from 'primeng/api';
 
 @Component({

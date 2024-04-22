@@ -46,7 +46,12 @@
             (click)="navigateToDetail(data)"
             [class.active]="i === 0"
           >
-            <img [src]="data.imageUrl" class="card-img" alt="..." />
+            <img
+              [defaultImage]="defaultImage"
+              [lazyLoad]="data.imageUrl"
+              class="card-img"
+              alt="..."
+            />
           </div>
           <div
             class="d-flex justify-content-between align-items-center carousel-control__btn"

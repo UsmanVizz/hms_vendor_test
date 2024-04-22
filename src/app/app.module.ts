@@ -9,6 +9,7 @@ import {
   NgxUiLoaderConfig,
   NgxUiLoaderHttpModule,
 } from 'ngx-ui-loader';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {};
 
@@ -19,6 +20,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {};
     AppRoutingModule,
     HttpClientModule,
     NgxUiLoaderRouterModule,
+    LazyLoadImageModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
   ],
   providers: [],

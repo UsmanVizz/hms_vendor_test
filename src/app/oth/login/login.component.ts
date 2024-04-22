@@ -18,6 +18,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   userLogin: FormGroup;
+  hidePassword: boolean = true;
 
   constructor(private router: Router, private fb: FormBuilder) {
     this.userLogin = this.fb.group({
@@ -36,5 +37,11 @@ export class LoginComponent implements OnInit {
 
   forgotPassword() {
     this.router.navigate(['forgot-password']);
+  }
+
+  
+
+  togglePasswordVisibility(): void {
+    this.hidePassword = !this.hidePassword;
   }
 }

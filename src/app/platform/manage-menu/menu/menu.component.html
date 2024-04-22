@@ -10,20 +10,20 @@
   </div>
 </div>
 <section class="pt-5 pb-5">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-6">
         <h3 class="mb-3">Carousel cards title</h3>
       </div>
       <div class="col-6 text-right">
         <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-          <i class="pi pi-angle-left"></i>
+          <i class="fas fa-angle-left"></i>
         </a>
         <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-          <i class="pi pi-angle-right"></i>
+          <i class="fas fa-angle-right"></i>
         </a>
       </div>
-      <div class="col-12">
+
         <div class="card-carousel " >
           <div class="card-row card-container"  #cardRow>
             <div *ngFor="let card of cardsData" class="card ">
@@ -31,7 +31,7 @@
               <div class="card-body">
                 <div class="text-center text-bold">{{ card.title }}</div>
               </div>
-            </div>            
+                  
           </div>  
         </div>       
       </div>
@@ -46,7 +46,7 @@
 <div class="d-flex align-items-center mt-5 mx-2" style="background:white;padding: 20px; ">
   <div class="ml-auto">
     <button class="mx-2 sort-button" type="button">
-      <i class="pi pi-search"></i>
+      <i class="fas fa-search"></i>
     </button>
     <button class="mx-2 sort-button" type="button">
       <i class="fas fa-bars"> Sort All</i>
@@ -76,11 +76,18 @@
               <p class="card-text">{{ category.text }}</p>
               <div class="d-flex align-items-center">
                 <p class="text-black flex-grow-1 mb-0">Item: <span style="color: blue; font-weight: 600">{{ category.item }}</span></p>
-                <!-- <span> -->
-                  <!-- <p-button class="m-2" icon="pi pi-filter" severity="secondary" [outlined]="true"></p-button>
-                  <p-button class="m-2" icon="pi pi-trash" severity="secondary" [outlined]="true"></p-button>
-                  <p-button class="m-2" icon="pi pi-eye" severity="secondary" [outlined]="true"></p-button>
-                </span> -->
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn-button m-2">
+                    <i class="fas fa-filter"></i> 
+                  </button>
+                  <button type="button" class="btn-button m-2">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <button type="button" class="btn-button m-2">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+                
               </div>
             </div>
           </div>

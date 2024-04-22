@@ -1,76 +1,81 @@
 <div class="container">
-
-    <div class="row justify-content-center mt-4">
-      <div class="col-md-8"> 
-        <div class="card" *ngIf="category" >
-          <div class="row no-gutters">
-            <div class="d-flex align-items-center" >
-              <h1
-                class="text-black flex-grow-1 mb-0"
-                style="
-                  font-size: 18px;
-                  font-weight: 700;
-                  color: black;
-                  font-family: Plus Jakarta Sans;
-                "
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+      <div class="card" *ngIf="category">
+        <div class="row no-gutters">
+          <div class="d-flex align-items-center">
+            <h1
+              class="text-black flex-grow-1 mb-0"
+              style="
+                font-size: 18px;
+                font-weight: 700;
+                color: black;
+                font-family: Plus Jakarta Sans;
+              "
+            >
+              The Grand Avenue
+            </h1>
+            <div class="ml-auto">
+              <button
+                class="custom-button"
+                style="background-color: blue; font-size: 16px"
               >
-             The Grand Avenue
-              </h1>
-              <div class="ml-auto">
-                <button
-                  class="custom-button"
-                  style="background-color: blue; font-size: 16px"
-                 
-                >
-                 Edit Branch
-                </button>
-              </div>
+                Edit Branch
+              </button>
             </div>
-            <div class="image-container">
-              <img [src]="category.imageUrl" alt="..." />
-            </div>
-            <div class="text-container">
-              <h4 classs="mt-4">Branch</h4>
-              <div class="info-container">
-               
-                <div class="info-item">
-                    <p class="info-label">Title</p>
-                    <p class="info-value">{{ category.title }}</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label">Description</p>
-                    <p class="info-value">{{ category.description }}</p>
-                </div>
-                <div class="info-item">
-                    <p class="info-label">City</p>
-                    <p class="info-value">{{ category.city}}</p>
-                </div>
-                <div class="info-item">
-                  <p class="info-label">Area</p>
-                  <p class="info-value">{{ category.area }}</p>
-              </div>
-             
-            <div class="info-item">
-              <p class="info-label">Parking Capacity</p>
-              <p class="info-value">{{ category.capacity }}</p>
           </div>
-          <div class="info-item">
-            <p class="info-label">Special Attractions</p>
-            <p class="info-value">{{ category.attraction }}</p>
-        </div>
-        <div class="info-item">
-          <p class="info-label">Address on Map</p>
-          <p class="info-value">{{ category.map }}</p>
-      </div>
-     
-    <div class="info-item">
-      <p class="info-label">Address</p>
-      <p class="info-value">{{ category.address }}</p>
-  </div>
-  <div class="info-item">
-    <p class="info-label">Venus Owner</p>
-    <p class="info-value">{{ category.owner}}</p>
-</div>
+          <div class="image-container">
+            <img
+              [defaultImage]="defaultImage"
+              [lazyLoad]="category.imageUrl"
+              alt="..."
+            />
+          </div>
+          <div class="text-container">
+            <h4 classs="mt-4">Branch</h4>
+            <div class="info-container">
+              <div class="info-item">
+                <p class="info-label">Title</p>
+                <p class="info-value">{{ category.title }}</p>
+              </div>
+              <div class="info-item">
+                <p class="info-label">Description</p>
+                <p class="info-value">{{ category.description }}</p>
+              </div>
+              <div class="info-item">
+                <p class="info-label">City</p>
+                <p class="info-value">{{ category.city }}</p>
+              </div>
+              <div class="info-item">
+                <p class="info-label">Area</p>
+                <p class="info-value">{{ category.area }}</p>
+              </div>
+
+              <div class="info-item">
+                <p class="info-label">Parking Capacity</p>
+                <p class="info-value">{{ category.capacity }}</p>
+              </div>
+              <div class="info-item">
+                <p class="info-label">Special Attractions</p>
+                <p class="info-value">{{ category.attraction }}</p>
+              </div>
+              <div class="info-item">
+                <p class="info-label">Address on Map</p>
+                <p class="info-value">{{ category.map }}</p>
+              </div>
+
+              <div class="info-item">
+                <p class="info-label">Address</p>
+                <p class="info-value">{{ category.address }}</p>
+              </div>
+              <div class="info-item">
+                <p class="info-label">Venus Owner</p>
+                <p class="info-value">{{ category.owner }}</p>
+              </div>
             </div>
-            
-          </div></div></div></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

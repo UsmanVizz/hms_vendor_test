@@ -17,15 +17,13 @@
   .carousel-buttons button {
     margin-right: 10px; 
   }
-
-
-
-// .card {
-//   flex: 0 0 241px;
-//   height: 152px;
-//   padding: 0px 0px 22px 0px;
-//   border-radius: 8px;
-// }
+  .btn-button{
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    color: #dddddd;
+    padding: 6px 10px;
+    border-radius: 8px;
+  }
 
 .carousel-buttons {
   margin-top: 10px;
@@ -111,7 +109,7 @@
 }
 
 .card {
-  width: calc(100% - 12px);
+  width: calc(74% - 12px);
 }
 
 .card p-card {

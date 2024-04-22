@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 interface PageEvent {
   first: number;
   rows: number;
@@ -12,15 +13,14 @@ interface PageEvent {
   templateUrl: './manage-hall.component.html',
   styleUrls: ['./manage-hall.component.scss'],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule, LazyLoadImageModule],
 })
 export class ManageHallComponent implements OnInit {
   first: number = 0;
-
   currentIndex = 0;
-
   rows: number = 10;
   category: any;
+  defaultImage = '../../../../assets/images/default-img.gif';
 
   onPageChange(event: any) {
     this.first = event.first;

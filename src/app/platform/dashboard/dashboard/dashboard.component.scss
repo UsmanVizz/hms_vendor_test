@@ -108,20 +108,35 @@ agm-map {
   box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
   height: 100% !important;
 }
+
+.form-select {
+  font-size: 14px;
+}
+
 .chartcanvas {
-  height: 100% !important;
+  height: 320px !important;
   width: 100% !important;
 }
-// @media (min-width: 768px) and (max-width: 1023px) {
-//   .card1 {
-//     // margin-top: 30%;
-//     // height: 158px;
-//     // width: 204px;
-//     // box-shadow: 0 15px 60px rgba(129, 124, 124, 0.2);
-//     // border-radius: 5px;
-//     // backdrop-filter: blur(5px);
-//     // background-color: rgba(255, 255, 255, 0.745);
-//     // gap: 10px;
-//     // margin-left: 5%;
-//   }
-// }
+
+.trending-up {
+  cursor: pointer;
+  background-color: #1814f3;
+  color: #fff;
+  padding: 7px;
+  border-radius: 50px;
+  user-select: none;
+}
+
+.trending-down {
+  cursor: pointer;
+  background-color: #622cad;
+  color: #fff;
+  padding: 7px;
+  border-radius: 50px;
+  user-select: none;
+}
+
+.p-text {
+  margin-bottom: 0% !important;
+  font-size: 13px;
+}
