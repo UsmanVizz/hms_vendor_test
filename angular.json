@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hall-management-sys-owner-vendor": {
+    "repro-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hall-management-sys-owner-vendor",
+            "outputPath": "dist/repro-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,26 +30,22 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/jquery/dist/jquery.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "50mb",
-                  "maximumError": "51mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "50mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -69,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hall-management-sys-owner-vendor:build:production"
+              "browserTarget": "repro-app:build:production"
             },
             "development": {
-              "browserTarget": "hall-management-sys-owner-vendor:build:development"
+              "browserTarget": "repro-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hall-management-sys-owner-vendor:build"
+            "browserTarget": "repro-app:build"
           }
         },
         "test": {
@@ -97,7 +93,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -105,8 +100,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "d4554183-cf9c-4d09-8560-dd92ace94ae7"
   }
 }

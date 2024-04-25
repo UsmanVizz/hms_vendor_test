@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hall-management-sys-owner-vendor';
+  title = 'repro-app';
 }
