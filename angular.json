@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hall-management-sys-owner-vendor": {
+    "hall-management-system": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hall-management-sys-owner-vendor",
+            "outputPath": "dist/hall-management-system",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,14 +30,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/jquery/dist/jquery.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -45,12 +40,12 @@
                 {
                   "type": "initial",
                   "maximumWarning": "50mb",
-                  "maximumError": "51mb"
+                  "maximumError": "56mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "50mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "20mb",
+                  "maximumError": "40mb"
                 }
               ],
               "outputHashing": "all"
@@ -70,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hall-management-sys-owner-vendor:build:production"
+              "browserTarget": "hall-management-system:build:production"
             },
             "development": {
-              "browserTarget": "hall-management-sys-owner-vendor:build:development"
+              "browserTarget": "hall-management-system:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hall-management-sys-owner-vendor:build"
+            "browserTarget": "hall-management-system:build"
           }
         },
         "test": {
@@ -108,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "d4554183-cf9c-4d09-8560-dd92ace94ae7"
+    "analytics": "c6922cdf-5e61-48d0-bf31-001c3a79d896"
   }
 }
