@@ -1,16 +1,44 @@
-import { Component } from '@angular/core';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import {
+  CdkDrag,
+  CdkDragDrop,
+  CdkDropList,
+  CdkDropListGroup,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  FormControl,
+  FormGroup,
+  Validators,
+  FormBuilder,
+  FormArray,
+} from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-add-deal',
-  standalone: true,
-  imports: [DragDropModule, CommonModule],
   templateUrl: './add-deal.component.html',
   styleUrls: ['./add-deal.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule,
+    DragDropModule,
+    FormsModule,
+    ReactiveFormsModule,
+    CdkDropListGroup,
+    CdkDropList,
+    CdkDrag,
+  ],
 })
-export class AddDealComponent {
+export class AddDealComponent implements OnInit {
+  addDealForm!: FormGroup;
+
   cardsData = [
     {
       title: 'Card 1',
@@ -45,10 +73,70 @@ export class AddDealComponent {
   ];
   selectedCardIndex: number = -1;
 
+  items = ['Carrots', 'Tomatoes', 'Onions', 'Apples', 'Avocados'];
+
+  basket = ['Oranges', 'Bananas', 'Cucumbers'];
+
   constructor() {}
-  removeCard(index: number): void {
-    this.cardsData.splice(index, 1);
+
+  ngOnInit(): void {}
+
+  trackByFn(index: number, item: any): any {
+    return index;
   }
+
+  get menuItems() {
+    return this.addDealForm.get('menuItems') as FormArray;
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    if (event.previousContainer === event.container) {
+      moveItemInArray(
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    } else {
+      transferArrayItem(
+        event.previousContainer.data,
+        event.container.data,
+        event.previousIndex,
+        event.currentIndex
+      );
+    }
+  }
+
+  addSelectItem(item: string) {
+    // Find the index of the item in the items array
+    const index = this.items.indexOf(item);
+
+    // If the item is found in the items array
+    if (index !== -1) {
+      // Remove the item from the items array
+      this.items.splice(index, 1);
+
+      // Add the item to the basket array
+      this.basket.push(item);
+
+      // Optionally, you can update the form control value or perform any other necessary actions here
+    }
+  }
+
+  returnSelectedItem(item: string) {
+    const index = this.basket.indexOf(item);
+
+    // If the item is found in the basket array
+    if (index !== -1) {
+      // Remove the item from the basket array
+      this.basket.splice(index, 1);
+
+      // Add the item to the items array
+      this.items.push(item);
+
+      // Optionally, you can update the form control value or perform any other necessary actions here
+    }
+  }
+
   getCardPosition(index: number): any {
     return {
       left: index % 2 === 0 ? '0' : '50%',
@@ -63,18 +151,16 @@ export class AddDealComponent {
     return this.selectedCardIndex === index;
   }
 
-  sourceItems = ['Item 1', 'Item 2', 'Item 3'];
-  destinationItems: string[] = [];
-  onDrop(event: CdkDragDrop<string[]>, targetIndex: number): void {
-    const droppedIndex = event.previousIndex;
+  submitDeal() {
+    const selectedItems = this.basket;
 
-    // Check if the item is dropped at a different position
-    if (droppedIndex !== targetIndex) {
-      // Remove the item from its previous position
-      const movedItem = this.cardsData.splice(droppedIndex, 1)[0];
+    const formData = {
+      ...this.addDealForm.value,
+      selectedItems: selectedItems,
+    };
 
-      // Insert the item at the target index
-      this.cardsData.splice(targetIndex, 0, movedItem);
-    }
+    console.log(formData);
+
+    this.addDealForm.reset();
   }
 }

@@ -1,35 +1,26 @@
-<div class="d-flex align-items-center" style="margin-top: 100px">
-  <h1 class="text-black flex-grow-1 mb-0 fs-18 fw-700">All Hall</h1>
+<div class="d-flex align-items-center" style="margin-top: 50px">
+  <h1 class="text-black flex-grow-1 mb-0 fs-18 fw-700 mx-5">All Halls</h1>
   <div class="ml-auto">
-    <button
-      class="custom-button"
-      style="background-color: blue; font-size: 16px"
-      (click)="navigateToAddHall()"
-    >
-      Add Halls
+    <button class="custom-button" (click)="navigateToAddHall()">
+      <span class="add-hall">Add Hall</span>
     </button>
   </div>
 </div>
-<div class="d-flex align-items-center mt-5 mx-2">
+<div class="d-flex align-items-center mt-5 mx-5">
   <div class="ml-auto d-flex gap-1 align-items-center">
-    <button class="mx-2 sort-button search-btn" type="button">
-      <span class="material-symbols-outlined"> search </span>
+    <button class="mx-2 sort-button search-btn btn-text" type="button">
+      <span>
+        <img src="../../../../assets/halls/search-normal.png" alt="Logo" /></span>
     </button>
-    <button
-      class="mx-2 sort-button search-btn d-flex gap-1 align-items-center"
-      type="button"
-    >
+    <button class="mx-2 sort-button search-btn d-flex gap-1 align-items-center" type="button">
       <span class="material-symbols-outlined"> filter_list </span>
       <span class="btn-text">Sort date</span>
       <span class="btn-text span-text__color">All</span>
     </button>
 
-    <button
-      class="mx-2 sort-button search-btn d-flex gap-1 align-items-center"
-      type="button"
-    >
+    <button class="mx-2 sort-button search-btn d-flex gap-1 align-items-center" type="button">
       <span class="material-symbols-outlined"> tune </span>
-      <span class="btn-text">Filter</span>
+      <span class="btn-text-filter">Filter</span>
     </button>
   </div>
 </div>
@@ -37,53 +28,29 @@
   <div class="row">
     <div class="col-md-12">
       <div class="card-container">
-        <div
-          class="card mb-4 col-xl-4"
-          *ngFor="let data of cardData; let i = index"
-        >
-          <div
-            class="card-header p-0"
-            (click)="navigateToDetail(data)"
-            [class.active]="i === 0"
-          >
-            <img
-              [defaultImage]="defaultImage"
-              [lazyLoad]="data.imageUrl"
-              class="card-img"
-              alt="..."
-            />
+        <div class="card mb-4 col-xl-3" *ngFor="let data of cardData">
+          <div class="card-header p-0">
+            <img [defaultImage]="defaultImage" [lazyLoad]="data.imageUrl" class="card-img" alt="..." />
           </div>
-          <div
-            class="d-flex justify-content-between align-items-center carousel-control__btn"
-          >
-            <img
-              src="../../../../assets/icon/left-arrow.png"
-              alt="left arrow"
-              class="m-3"
-              (click)="prevSlide()"
-            />
-            <ol class="carousel-indicators mx-auto">
+          <div class="d-flex justify-content-between align-items-center carousel-control__btn">
+            <img src="../../../../assets/icon/left-arrow.png" alt="left arrow" class="m-3" (click)="prevSlide()" />
+            <!-- <ol class="carousel-indicators mx-auto">
               <li
                 *ngFor="let card of cardData; let i = index"
                 [attr.data-target]="'#myCarousel'"
                 [attr.data-slide-to]="i"
                 [class.active]="i === currentIndex"
               ></li>
-            </ol>
-            <img
-              src="../../../../assets/icon/right-arrow.png"
-              alt="right arrow"
-              class="m-3"
-              (click)="nextSlide()"
-            />
+            </ol> -->
+            <img src="../../../../assets/icon/right-arrow.png" alt="right arrow" class="m-3" (click)="nextSlide()" />
           </div>
           <div class="card-body p-4">
             <div class="d-flex align-items-center">
               <h5 class="card-description flex-grow-1 mb-0 mx-2">All Halls</h5>
               <span>
-                <h5 class="card-location flex-grow-1 mb-0">
+                <h5 class="card-price flex-grow-1 mb-0">
                   <span class="mx-2" style="color: #b1b1b1">Price: </span>
-                  {{ data.price }}
+                  <span class="price">{{ data.price }}</span>
                 </h5>
               </span>
             </div>

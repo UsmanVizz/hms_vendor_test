@@ -25,7 +25,7 @@ export class DealsComponent implements OnInit {
   ngOnInit(): void {}
 
   navigateToAddDeal() {
-    this.router.navigate(['hms-main/add-deal']);
+    this.router.navigate(['hms-owner/add-deal']);
   }
 
   setActiveIndex(index: number) {
@@ -36,7 +36,7 @@ export class DealsComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Deal Name',
-      text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
+      text: 'Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
       dealText:
         'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
@@ -46,9 +46,9 @@ export class DealsComponent implements OnInit {
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
-        { icon: 'pi pi-trash', severity: 'secondary' },
-        { icon: 'pi pi-eye', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
+        { icon: 'fas fa-trash', severity: 'secondary' },
+        { icon: 'fas fa-eye', severity: 'secondary' },
       ],
       images: [
         { url: 'assets/food/images/food-2.jpg' },
@@ -59,7 +59,7 @@ export class DealsComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Deal Name',
-      text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
+      text: 'Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
       dealText:
         'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
@@ -68,9 +68,9 @@ export class DealsComponent implements OnInit {
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
-        { icon: 'pi pi-trash', severity: 'secondary' },
-        { icon: 'pi pi-eye', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
+        { icon: 'fas fa-trash', severity: 'secondary' },
+        { icon: 'fas fa-eye', severity: 'secondary' },
       ],
       images: [
         { url: 'assets/food/images/food-2.jpg' },
@@ -81,7 +81,7 @@ export class DealsComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Deal Name',
-      text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
+      text: 'Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
       dealText:
         'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
@@ -90,9 +90,9 @@ export class DealsComponent implements OnInit {
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
-        { icon: 'pi pi-trash', severity: 'secondary' },
-        { icon: 'pi pi-eye', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
+        { icon: 'fas fa-trash', severity: 'secondary' },
+        { icon: 'fas fa-eye', severity: 'secondary' },
       ],
       images: [
         { url: 'assets/food/images/food-2.jpg' },
@@ -103,7 +103,7 @@ export class DealsComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Deal Name',
-      text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
+      text: 'Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
       dealText:
         'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
@@ -112,9 +112,9 @@ export class DealsComponent implements OnInit {
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
-        { icon: 'pi pi-trash', severity: 'secondary' },
-        { icon: 'pi pi-eye', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
+        { icon: 'fas fa-trash', severity: 'secondary' },
+        { icon: 'fas fa-eye', severity: 'secondary' },
       ],
       images: [
         { url: 'assets/food/images/food-2.jpg' },
@@ -125,7 +125,7 @@ export class DealsComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Deal Name',
-      text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
+      text: 'Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
       dealText:
         'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
@@ -134,9 +134,9 @@ export class DealsComponent implements OnInit {
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
-        { icon: 'pi pi-trash', severity: 'secondary' },
-        { icon: 'pi pi-eye', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
+        { icon: 'fas fa-trash', severity: 'secondary' },
+        { icon: 'fas fa-eye', severity: 'secondary' },
       ],
       images: [
         { url: 'assets/food/images/food-2.jpg' },
@@ -147,7 +147,7 @@ export class DealsComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-1.jpg',
       title: 'Deal Name',
-      text: 'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi pellentesque id et. Cursus convallis sit tincidunt venenatis  ',
+      text: 'Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  Lorem ipsum dolor sit Cursus convallis sit tincidunt venenatis  ',
       dealTitle: 'Add Item',
       dealText:
         'Lorem ipsum dolor sit amet consectetur. In auctor quam sollicitudin facilisi nenatis  ',
@@ -156,9 +156,9 @@ export class DealsComponent implements OnInit {
       checked: false,
       isChecked: false,
       buttons: [
-        { icon: 'pi pi-filter', severity: 'secondary' },
-        { icon: 'pi pi-trash', severity: 'secondary' },
-        { icon: 'pi pi-eye', severity: 'secondary' },
+        { icon: 'fas fa-filter', severity: 'secondary' },
+        { icon: 'fas fa-trash', severity: 'secondary' },
+        { icon: 'fas fa-eye', severity: 'secondary' },
       ],
       images: [
         { url: 'assets/food/images/food-1.jpg' },

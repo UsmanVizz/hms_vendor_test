@@ -25,9 +25,11 @@
               Forgot Password?
             </p>
           </div>
-          <input [type]="hidePassword ? 'password' : 'text'" id="password" placeholder="Password" class="input-size" formControlName="password" />
-          <i class="far font-size" [ngClass]="hidePassword ? 'fa-eye-slash' : 'fa-eye'" (click)="togglePasswordVisibility()"></i>
-          
+          <input [type]="hidePassword ? 'password' : 'text'" id="password" placeholder="Password" class="input-size"
+            formControlName="password" />
+          <i class="far font-size" [ngClass]="hidePassword ? 'fa-eye-slash' : 'fa-eye'"
+            (click)="togglePasswordVisibility()"></i>
+
         </div>
 
         <button type="submit" class="btn signup-btn d-flex gap-3 align-items-center">

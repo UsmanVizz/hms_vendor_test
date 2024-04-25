@@ -1,115 +1,120 @@
 .card-title {
-    color: black;
-    font-size: 17px;
-    line-height: 30px;
-    font-weight: 700;
-    text-transform: capitalize;
-  }
-  .card-body {
-    color: grey;
-    padding: 39px, 32px, 39px, 24px;
-    font-size: 13px;
-  }
-  .carousel-inner > .item > a > img,
-  .carousel-inner > .item > img,
-  .img-responsive,
-  .thumbnail a > img,
-  .thumbnail > img {
-    display: block;
-    width: 100%;
-    height: 170px;
-    border-radius:10px;
-    max-width: 100%;
-    text-align: center;
-    margin-top: 14px;
-    margin-left: 5px;
-  }
-  .carousel-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  
-  .indicator {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ccc;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .card-footer {
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    bottom: 0;
-  
-    z-index: 999; /* Ensure it stays above other content */
-  }
-  
-  .card-text {
+  color: black;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.card-body {
+  color: grey;
+  padding: 39px, 32px, 39px, 24px;
+  font-size: 13px;
+}
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.img-responsive,
+.thumbnail a > img,
+.thumbnail > img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  border-radius: 10px;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 5px;
+}
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-  }
-  .card-img::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-radius: 20px;
-    height: 20%; /* Adjust the height of the shadow as needed */
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 40.71%,
-      rgba(0, 0, 0, 0.84) 92.31%
-    ); /* Adjust the opacity and direction of the shadow as needed */
-  }
-  .indicator.active {
-    background-color: white;
-  }
-  
-  ::ng-deep .p-button-secondary {
-    border-radius: 6px;
-    color: rgb(186, 180, 180);
-    background: white !important;
-    height: 33px !important;
-    width: 30px;
-  }
-  
-  .custom-button {
-    border: none;
-    background-color: #1814f3;
-    color: white;
-    padding: 12px 16px;
-    border-radius: 8px;
-  }
-  .sort-button {
-    border: 1px solid #dddddd;
-    background-color: #ffffff;
-    color: #dddddd;
-    padding: 12px 16px;
-    border-radius: 8px;
-  }
-  // .card {
-  //   display: flex;
-  //   width: 614px;
-  //   height: 196px;
-  // }
-  
-  .image-container {
-    flex: 2;
-  }
-  
-  .text-container {
-    flex: 8;
-  }
-  .carousel-inner > .item {
-    width: 233px;
-    height: 183px;
-  }
-  
+.indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.card-footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+
+  z-index: 999;
+}
+
+.card-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+.card-img::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  height: 20%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 40.71%,
+    rgba(0, 0, 0, 0.84) 92.31%
+  );
+}
+.indicator.active {
+  background-color: white;
+}
+
+::ng-deep .p-button-secondary {
+  border-radius: 6px;
+  color: rgb(186, 180, 180);
+  background: white !important;
+  height: 33px !important;
+  width: 30px;
+}
+
+.custom-button {
+  border: none;
+  background-color: #fb6f10;
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+.sort-button {
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  color: #dddddd;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+// .card {
+//   display: flex;
+//   width: 614px;
+//   height: 196px;
+// }
+
+.image-container {
+  flex: 2;
+}
+
+.text-container {
+  flex: 8;
+}
+.carousel-inner > .item {
+  width: 233px;
+  height: 183px;
+}
+.btn-button {
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  color: #dddddd;
+  padding: 6px 10px;
+  border-radius: 8px;
+}

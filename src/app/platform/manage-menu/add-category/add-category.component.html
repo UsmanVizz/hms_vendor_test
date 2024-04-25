@@ -1,80 +1,85 @@
 <div class="container mt-5">
-    <div class="d-flex align-items-center m-5" style="margin-top: 100px">
-        <h1
-          class="text-black flex-grow-1 mb-0"
-          style="
-            font-size: 18px;
-            font-weight: 700;
-            color: black;
-            font-family: Plus Jakarta Sans;
-          "
-        >
-          Add Category
-        </h1>
-        <div class="ml-auto">
-          <button
-            class="custom-button"
-            style="background-color: blue; font-size: 16px"
-          >
-           Save
-          </button>
+  <div class="d-flex align-items-center m-5" style="margin-top: 100px">
+    <h1 class="text-black flex-grow-1 mb-0 fs-18 fw-700">Add Category</h1>
+    <div class="ml-auto">
+      <button class="custom-button">Save</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Category Details</div>
+    <div class="card-body">
+      <form>
+        <div class="row">
+          <div class="col">
+            <label for="branchName" class="branch">Category Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Category Name"
+            />
+          </div>
+          <div class="col">
+            <label for="branchName" class="branch">Branch Name</label>
+            <select
+              class="form-select form-select-lg"
+              aria-label=".form-select-lg example"
+            >
+              <option selected>Select Branch</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
         </div>
-      </div>
-    
-  
-    <div class="card">
-      <div class="card-title">Category Details</div>
-      <div class="card-body">
-        <form>
-          <div class="row">
-            <div class="col">
-              <label for="branchName" class="branch">Category Name</label>
-              <input type="text" class="form-control" placeholder="Category Name">
-            </div>
-            <div class="col">
-              <label for="branchId" class="branch">Branch Name</label>
-              <select class="form-select form-select-lg " aria-label=".form-select-lg example">
-                <option selected>Select Branch</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-            </select>
-            </div>
+        <div class="row mt-3">
+          <div class="col">
+            <label for="branchName" class="branch">Description</label>
+            <textarea
+              class="form-control small-textarea"
+              placeholder=""
+            ></textarea>
           </div>
-          <div class="row mt-3">
-            <div class="col">
-              <label for="branchName" class="branch">Description</label>
-              <textarea class="form-control small-textarea" placeholder=""></textarea>
-                 </div>
-            <div class="col">
-              <label for="branchId" class="branch">Add item</label>
-              <select class="form-select form-select-lg " aria-label=".form-select-lg example">
-                <option selected>Floor 1</option>
-                <option value="1">Floor 2</option>
-                <option value="2">Floor 3</option>
-                <option value="3">Floor 4</option>
+          <div class="col">
+            <label for="branchId" class="branch">Add item</label>
+            <select
+              class="form-select form-select-lg"
+              aria-label=".form-select-lg example"
+            >
+              <option selected>Floor 1</option>
+              <option value="1">Floor 2</option>
+              <option value="2">Floor 3</option>
+              <option value="3">Floor 4</option>
             </select>
           </div>
-          </div>
-        </form>
+        </div>
+      </form>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex align-items-center gap-3 mx-2 mt-2">
+        <label for="branchName" class="images-slider mt-5"
+          >Add Thumbnail Image</label
+        >
+        <label for="branchName" class="images-slider mx-3 mt-5"
+          >Menu Images</label
+        >
       </div>
-      <div class="d-flex flex-column">
-        <div class="d-flex align-items-center gap-3 mx-2 mt-2">
-          <label for="branchName" class="images-slider mt-5">Add Thumbnail Image</label>
-          <label for="branchName" class="images-slider mx-3 mt-5">Menu Images</label></div></div>
-          <div class="d-flex flex-column">
-            <div class="d-flex align-items-center gap-3 mx-5 mt-2">
-    
-        <div class="d-flex align-items-center gap-3 mx-10 mt-2 image-container"> 
+    </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex align-items-center gap-3 mx-5 mt-2">
+        <div class="d-flex align-items-center gap-3 mx-10 mt-2 image-container">
           <div *ngFor="let image of uploadedthumbnail" class="chip-img">
-            <img [src]="image.url"   width="200"
-            height="180"
-            class="object-fit-fill" />
+            <img
+              [src]="image.url"
+              width="200"
+              height="180"
+              class="object-fit-fill"
+            />
             <span class="close" (click)="removeThumbnail(image)">
-              <img src="../../../../assets/icon/cross-btn.png" alt=""  />
+              <img src="../../../../assets/icon/cross-btn.png" alt="" />
             </span>
           </div>
-           <div *ngIf="uploadedthumbnail.length === 0">
+          <div *ngIf="uploadedthumbnail.length === 0">
             <label for="thumbnail-upload" class="custom-file-upload">
               <input
                 id="thumbnail-upload"
@@ -87,34 +92,33 @@
             </label>
           </div>
         </div>
-      <div class="d-flex align-items-center gap-3 mt-1">
-        <div *ngFor="let image of uploadedImages" class="chip">
-          <img
-            [src]="image.url"
-            width="100"
-            height="100"
-            class="object-fit-fill"
-          />
-          <span class="close" (click)="removeImage(image)"
-            ><img src="../../../../assets/icon/cross-btn.png" alt=""
-          /></span>
-        </div>
-
-        <div>
-          <label for="file-upload" class="custom-thumbnail-upload">
-            <input
-              id="file-upload"
-              type="file"
-              (change)="onFileSelected($event)"
-              accept="image/*"
-              multiple
+        <div class="d-flex align-items-center gap-3 mt-1">
+          <div *ngFor="let image of uploadedImages" class="chip">
+            <img
+              [src]="image.url"
+              width="100"
+              height="100"
+              class="object-fit-fill"
             />
-            <span class="material-symbols-outlined"> add_circle </span>
-          </label>
+            <span class="close" (click)="removeImage(image)"
+              ><img src="../../../../assets/icon/cross-btn.png" alt=""
+            /></span>
+          </div>
+
+          <div>
+            <label for="file-upload" class="custom-thumbnail-upload">
+              <input
+                id="file-upload"
+                type="file"
+                (change)="onFileSelected($event)"
+                accept="image/*"
+                multiple
+              />
+              <span class="material-symbols-outlined"> add_circle </span>
+            </label>
+          </div>
         </div>
-      </div>
-      </div>
       </div>
     </div>
   </div>
-  
+</div>

@@ -16,20 +16,32 @@ export class MenuComponent implements OnInit {
   scrollDistance = 10;
   scrollInterval = 10;
   scrollIntervalId: any;
-  activeIndex: number = 0;
+  // activeIndex: number = 0;
 
   @ViewChild('cardRow', { static: true }) cardRow!: ElementRef<HTMLDivElement>;
+  @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLDivElement>;
   @ViewChild('carouselExampleIndicators2', { static: true })
   carouselExampleIndicators2!: ElementRef;
-
+  cardWidth: number = 300;
   cardsData = [
     { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
     { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
     { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
     { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
-    { title: 'Card 2', imageUrl: 'assets/food/images/food-2.jpg' },
+    { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
+    { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
+    { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
+    { title: 'Card 1', imageUrl: 'assets/food/images/food-1.jpg' },
   ];
 
+  prevSlide(): void {
+    this.scrollContainer.nativeElement.scrollLeft -= this.cardWidth;
+    console.log('jsd');
+  }
+
+  nextSlide(): void {
+    this.scrollContainer.nativeElement.scrollLeft += this.cardWidth;
+  }
   cards = [
     {
       imageUrl: 'assets/food/images/food-2.jpg',
@@ -141,54 +153,22 @@ export class MenuComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.selectedCards = new Array(this.cardsData.length).fill(false);
+  }
 
   ngOnInit(): void {}
 
   navigateToAddMenu() {
-    this.router.navigate(['/hms-main/add-menu']);
+    this.router.navigate(['/hms-owner/add-menu']);
+  }
+  selectedCards: boolean[] = [];
+  toggleSelection(index: number) {
+    this.selectedCards[index] = !this.selectedCards[index];
+    console.log('ddd');
   }
 
-  scrollCards(direction: 'left' | 'right'): void {
-    const cardRowElement = this.cardRow.nativeElement;
-    const scrollAmount =
-      direction === 'left' ? -this.scrollDistance : this.scrollDistance;
-    clearInterval(this.scrollIntervalId);
-
-    this.scrollIntervalId = setInterval(() => {
-      cardRowElement.scrollLeft += scrollAmount;
-
-      // Check if reached the end of cards
-      if (direction === 'left' && cardRowElement.scrollLeft <= 0) {
-        clearInterval(this.scrollIntervalId);
-      } else if (
-        direction === 'right' &&
-        cardRowElement.scrollLeft >=
-          cardRowElement.scrollWidth - cardRowElement.clientWidth
-      ) {
-        clearInterval(this.scrollIntervalId);
-      }
-    }, this.scrollInterval);
-  }
-
-  selectCard(card: any): void {
-    this.selectCard = card;
-  }
-  private scrollLeft() {
-    if (this.cardRow && this.carouselExampleIndicators2) {
-      this.cardRow.nativeElement.scrollLeft -= 100; // Adjust the scroll amount as needed
-      this.carouselExampleIndicators2.nativeElement.scrollLeft -= 100; // Adjust the scroll amount as needed
-    }
-  }
-
-  private scrollRight() {
-    if (this.cardRow && this.carouselExampleIndicators2) {
-      this.cardRow.nativeElement.scrollLeft += 100; // Adjust the scroll amount as needed
-      this.carouselExampleIndicators2.nativeElement.scrollLeft += 100; // Adjust the scroll amount as needed
-    }
-  }
-
-  setActiveIndex(index: number) {
-    this.activeIndex = index;
+  isSelected(index: number): boolean {
+    return this.selectedCards[index];
   }
 }

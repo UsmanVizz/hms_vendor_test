@@ -5,6 +5,7 @@ import { MainPageRoutingModule } from './mainpage-routing.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { CdkMenuModule } from '@angular/cdk/menu';
 
 @NgModule({
   declarations: [NavBarComponent, SideBarComponent, MainPageComponent],
@@ -13,6 +14,7 @@ import { MainPageComponent } from './main-page/main-page.component';
     FormsModule,
     ReactiveFormsModule,
     MainPageRoutingModule,
+    CdkMenuModule
     // NgProgressModule.withConfig({
     //     spinner:false,
     //     color: "#426bf7",

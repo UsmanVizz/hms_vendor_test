@@ -31,7 +31,7 @@ export class CatagoriesComponent implements OnInit {
   ngOnInit(): void {}
 
   navigateToAddCategory() {
-    this.router.navigate(['hms-main/add-category']);
+    this.router.navigate(['hms-owner/add-category']);
   }
 
   setActiveIndex(index: number) {
@@ -42,7 +42,7 @@ export class CatagoriesComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: ' a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: ' a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
@@ -60,7 +60,7 @@ export class CatagoriesComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: ' Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: ' Latin scholar from Hampden-Sydney College..m Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,.Richard McClintock, a Latin scholar from Hampden-Sydney College...',
       item: 29,
       checked: false,
       isChecked: false,
@@ -78,7 +78,7 @@ export class CatagoriesComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'a Latin scholar from Hampden-Sydney Collegfrom Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: 'a Latin scholar from Hampden-Sydney McClintock,a Latin scholar from Hampden-Sydney College..McClintock,a Latin scholar from Hampden-Sydney College.. Collegfrom Hampden-Sydneyholar from Hampden-Sydney College...a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,',
       item: 29,
       checked: false,
       isChecked: false,
@@ -96,7 +96,7 @@ export class CatagoriesComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: 'a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: 'a Latin scholar from Hampden-Sydney College...Richard McClintock,hard McClintock, a Latin scholar from Hampden-Sydney College...a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock,',
       item: 29,
       checked: false,
       isChecked: false,
@@ -114,7 +114,7 @@ export class CatagoriesComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-2.jpg',
       title: 'Menu Category Name 1',
-      text: ' a Latin scholar from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: ' a Latin scholar from Hampden-Sydney McClintock,a Latin scholar from Hampden-Sydney College.. College...Richard McClintock,a Latin scholar from Hampden-Sydney College... McClintock,a Latin scholar from Hampden-Sydney College..McClintock,a Latin scholar from Hampden-Sydney College..McClintock,a Latin scholar from Hampden-Sydney College..',
       item: 29,
       checked: false,
       isChecked: false,
@@ -132,7 +132,7 @@ export class CatagoriesComponent implements OnInit {
     {
       imageUrl: 'assets/food/images/food-1.jpg',
       title: 'Menu Category Name 2',
-      text: 'a Latin scholar from Hampden-Sydney  from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...',
+      text: 'a Latin scholar from Hampden-Sydney  from Hampden-Sydney College...Richard McClintock,a Latin scholar from Hampden-Sydney College...Richard McClintock, a Latin scholar from Hampden-Sydney College...McClintock,a Latin scholar from Hampden-Sydney College..McClintock,a Latin scholar from Hampden-Sydney College..McClintock,a Latin scholar from Hampden-Sydney College..',
       item: 29,
       checked: false,
       isChecked: false,

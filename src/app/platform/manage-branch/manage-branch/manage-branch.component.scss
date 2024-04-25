@@ -75,17 +75,10 @@
   background-color: white;
 }
 
-::ng-deep .p-button-secondary {
-  border-radius: 6px;
-  color: rgb(186, 180, 180);
-  background: white !important;
-  height: 33px !important;
-  width: 30px;
-}
-
 .custom-button {
   border: none;
-  background-color: #1814f3;
+  background-color: #fb6f10 !important;
+  font-size: 16px;
   color: white;
   padding: 12px 16px;
   border-radius: 8px;
@@ -94,8 +87,13 @@
   border: 1px solid #dddddd;
   background-color: #ffffff;
   color: #dddddd;
-  padding: 12px 16px;
   border-radius: 8px;
+  border: 1px solid #dddddd;
+  padding: 8px 16px 8px 16px;
+}
+.span-text__color {
+  color: #fb6f10 !important;
+  // font-size: 12px;
 }
 .card {
   display: flex;
@@ -114,4 +112,10 @@
 .carousel-inner > .item {
   width: 237px;
   height: 234px;
+}
+.branches {
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }

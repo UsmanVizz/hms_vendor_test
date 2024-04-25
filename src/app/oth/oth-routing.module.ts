@@ -27,11 +27,11 @@ const routes: Routes = [
             (m) => m.ForgotPasswordComponent
           ),
       },
-      {
-        path: 'sign-up',
-        loadComponent: () =>
-          import('./sign-up/sign-up.component').then((m) => m.SignUpComponent),
-      },
+      // {
+      //   path: 'sign-up',
+      //   loadComponent: () =>
+      //     import('./sign-up/sign-up.component').then((m) => m.SignUpComponent),
+      // },
     ],
   },
 ];

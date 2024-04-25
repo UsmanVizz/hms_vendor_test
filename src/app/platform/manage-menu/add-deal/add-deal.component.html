@@ -1,76 +1,328 @@
-  <div class="container-fluid mt-6">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-3">
-          <div class="card-body">
-
-            <div class="card border-0">
-              <section class="pt-5 pb-5">
-                  <div class="container">
-                    <div class="form-group" style="width: 55%; border-radius: 20px;">
-                      <label for="card1Input">Input for Card 1:</label>
-                      <input type="text" id="card1Input" class="form-control" placeholder="Enter text for Card 1">
-                    </div>
-                    <div class="row">
-                      <div class="col-6">
-              
-                        <h3 class="mb-3">Carousel cards title</h3>
-                      </div>
-                      <div class="col-6 text-right">
-                        <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                          <i class="pi pi-angle-left"></i>
-                        </a>
-                        <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                          <i class="pi pi-angle-right"></i>
-                        </a>
-                      </div>
-                      <div class="col-12">
-                          <div class="card-carousel">
-                            <div class="card-row card-container" #cardRow>
-                              <div *ngFor="let card of cardsData; let i = index" class="card" [class.selected]="isSelected(i)" (click)="toggleSelection(i)">
-                                <img [src]="card.imageUrl" alt="{{ card.title }}">
-                                <div class="card-body">
-                                  <div class="text-center text-bold">{{ card.title }}</div>
-                                </div>
-                              </div>            
-                            </div>  
-                          </div>       
-                        </div>
-                    </div>
-                    <div class="row">
-                      <ng-container *ngFor="let card of cardsData; let i = index" >
-                        <div class="col-sm-6">
-                          <div class="card" cdkDrag>
-                            <div class="card-body">
-                              <h5 class="card-title">{{ card.title }} <button type="button" class="close" aria-label="Close" (click)="removeCard(i)">
-                                <span aria-hidden="true">&times;</span>
-                              </button></h5>
-                              <p>{{ card.description }}</p>
+<div class="container-fluid mt-6">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <form
+            [formGroup]="addDealForm"
+            (ngSubmit)="submitDeal()"
+            class="card border-0"
+          >
+            <section class="pt-5 pb-5">
+              <div class="container">
+                <div class="form-group" style="width: 55%; border-radius: 20px">
+                  <label for="card1Input">Input for Card 1:</label>
+                  <input
+                    type="text"
+                    id="card1Input"
+                    class="form-control"
+                    placeholder="Enter text for Card 1"
+                  />
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h3 class="mb-3">Carousel cards title</h3>
+                  </div>
+                  <div class="col-6 text-right">
+                    <a
+                      class="btn mb-3 mr-1"
+                      href="#carouselExampleIndicators2"
+                      role="button"
+                      data-slide="prev"
+                    >
+                      <i class="fas fa-angle-left"></i>
+                    </a>
+                    <a
+                      class="btn mb-3"
+                      href="#carouselExampleIndicators2"
+                      role="button"
+                      data-slide="next"
+                    >
+                      <i class="fas fa-angle-right"></i>
+                    </a>
+                  </div>
+                  <div class="col-12">
+                    <div class="card-carousel">
+                      <div class="card-row card-container" #cardRow>
+                        <div
+                          *ngFor="let card of cardsData; let i = index"
+                          class="card"
+                          [class.selected]="isSelected(i)"
+                          (click)="toggleSelection(i)"
+                        >
+                          <img [src]="card.imageUrl" alt="{{ card.title }}" />
+                          <div class="card-body">
+                            <div class="text-center text-bold">
+                              {{ card.title }}
                             </div>
                           </div>
                         </div>
-                        <div *ngIf="(i + 1) % 2 === 0" class="w-100"></div>
-                      </ng-container>
+                      </div>
                     </div>
                   </div>
-                </section>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card mb-3">
-          <h3 class="card-header">Card 2 Title</h3>
-          <div class="card-body">
-            <div class="col-sm-6" cdkDropList >
-            
-                  <h5 class="card-title">Drop Zone</h5>
-                  <p class="card-text">Drag cards here</p>
-               
-            </div>
-          </div>
+                </div>
+                <div class="row">
+                  <ng-container>
+                    <div class="d-flex gap-3">
+                      <div class="d-flex flex-column p-3 rounded-3">
+                        <span class="span">Select Categories (46)</span>
+                        <div
+                          cdkDropListGroup
+                          class="d-flex justify-content-between"
+                        >
+                          <div class="example-container col-xl-5 menu-border">
+                            <h2 class="fw-bold fst-italic">Select items</h2>
+
+                            <div
+                              cdkDropList
+                              [cdkDropListData]="items"
+                              class="example-list"
+                              cdkDropListSortingDisabled
+                              (cdkDropListDropped)="drop($event)"
+                            >
+                              <div *ngIf="items.length === 0">
+                                <div class="checkbox">No more items</div>
+                              </div>
+                              <div
+                                *ngFor="let item of items; trackBy: trackByFn"
+                                cdkDrag
+                              >
+                                <div
+                                  class="d-flex justify-content-between custom-box"
+                                >
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img
+                                      src="../../../../assets/menu-categories/image-5.png"
+                                      alt=""
+                                    />
+                                    <div class="d-flex flex-column">
+                                      <span class="span">{{ item }}</span>
+                                      <span>Rs: 250 per head</span>
+                                    </div>
+                                  </div>
+                                  <img
+                                    src="../../../../assets/menu-categories/add-btn.png"
+                                    alt="cross btn"
+                                    class="cross-btn"
+                                    (click)="addSelectItem(item)"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="example-container col-xl-5">
+                            <h2 class="fw-bold fst-italic">Select items</h2>
+
+                            <div
+                              cdkDropList
+                              [cdkDropListData]="items"
+                              class="example-list"
+                              cdkDropListSortingDisabled
+                              (cdkDropListDropped)="drop($event)"
+                            >
+                              <div *ngIf="items.length === 0">
+                                <div class="checkbox">No more items</div>
+                              </div>
+                              <div
+                                *ngFor="let item of items; trackBy: trackByFn"
+                                cdkDrag
+                              >
+                                <div
+                                  class="d-flex justify-content-between custom-box"
+                                >
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img
+                                      src="../../../../assets/menu-categories/image-5.png"
+                                      alt=""
+                                    />
+                                    <div class="d-flex flex-column">
+                                      <span class="span">{{ item }}</span>
+                                      <span>Rs: 250 per head</span>
+                                    </div>
+                                  </div>
+                                  <img
+                                    src="../../../../assets/menu-categories/add-btn.png"
+                                    alt="cross btn"
+                                    class="cross-btn"
+                                    (click)="addSelectItem(item)"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- 
+                          <div class="example-container">
+                            <h2 class="fw-bold fst-italic">
+                              Selected Items {{ basket.length }}
+                            </h2>
+
+                            <div
+                              cdkDropList
+                              [cdkDropListData]="basket"
+                              class="example-list"
+                              (cdkDropListDropped)="drop($event)"
+                            >
+                              <div *ngIf="basket.length === 0">
+                                <div class="checkbox">No Item Selected</div>
+                              </div>
+                              <div
+                                *ngFor="let item of basket; trackBy: trackByFn"
+                                cdkDrag
+                              >
+                                <div
+                                  class="d-flex justify-content-between custom-box"
+                                >
+                                  <div class="d-flex gap-3 align-items-center">
+                                    <img
+                                      src="../../../../assets/menu-categories/image-5.png"
+                                      alt=""
+                                    />
+                                    <div class="d-flex flex-column">
+                                      <span class="span">{{ item }}</span>
+                                      <span>Rs: 250 per head</span>
+                                    </div>
+                                  </div>
+                                  <img
+                                    src="../../../../assets/menu-categories/cross-btn.png"
+                                    alt="cross btn"
+                                    class="cross-btn"
+                                    (click)="returnSelectedItem(item)"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex custom-box">
+                                <div class="d-flex gap-3 align-items-center">
+                                  <img
+                                    src="../../../../assets/menu-categories/drag and drop.png"
+                                    alt=""
+                                  />
+                                  <div class="d-flex flex-column">
+                                    <span class="fw-bold">Select Item</span>
+                                    <span class="span">(Drag and Drop)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </section>
+          </form>
         </div>
       </div>
     </div>
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="card-body">
+          <form>
+            <label for="deal-name">Name Deal</label>
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder=""
+            />
+            <label for="branch-name">Branch Name</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </form>
+          <h5 class="card-title">Drop Zone</h5>
+          <h2 class="fw-bold fst-italic">Selected Items {{ basket.length }}</h2>
+          <div class="col-sm-6" cdkDropList>
+            <div class="example-container">
+              <div
+                cdkDropList
+                [cdkDropListData]="basket"
+                class="example-list"
+                (cdkDropListDropped)="drop($event)"
+              >
+                <div *ngIf="basket.length === 0">
+                  <div class="checkbox">No Item Selected</div>
+                </div>
+                <div *ngFor="let item of basket; trackBy: trackByFn" cdkDrag>
+                  <div class="d-flex justify-content-between custom-box">
+                    <div class="d-flex gap-3 align-items-center">
+                      <img
+                        src="../../../../assets/menu-categories/image-5.png"
+                        alt=""
+                      />
+                      <div class="d-flex flex-column">
+                        <span class="span">{{ item }}</span>
+                        <span>Rs: 250 per head</span>
+                      </div>
+                    </div>
+                    <img
+                      src="../../../../assets/menu-categories/cross-btn.png"
+                      alt="cross btn"
+                      class="cross-btn"
+                      (click)="returnSelectedItem(item)"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex custom-box">
+                  <div class="d-flex gap-3 align-items-center">
+                    <img
+                      src="../../../../assets/menu-categories/drag and drop.png"
+                      alt=""
+                    />
+                    <div class="d-flex flex-column">
+                      <span class="fw-bold">Select Item</span>
+                      <span class="span">(Drag and Drop)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div *ngFor="let item of basket; trackBy: trackByFn" cdkDrag>
+              <div class="d-flex justify-content-between custom-box">
+                <div class="d-flex gap-3 align-items-center">
+                  <img
+                    src="../../../../assets/menu-categories/image-5.png"
+                    alt=""
+                  />
+                  <div class="d-flex flex-column">
+                    <span class="span">{{ item }}</span>
+                    <span>Rs: 250 per head</span>
+                  </div>
+                </div>
+                <img
+                  src="../../../../assets/menu-categories/cross-btn.png"
+                  alt="cross btn"
+                  class="cross-btn"
+                  (click)="returnSelectedItem(item)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <form>
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </form>
+      </div>
+    </div>
   </div>
-  
+</div>

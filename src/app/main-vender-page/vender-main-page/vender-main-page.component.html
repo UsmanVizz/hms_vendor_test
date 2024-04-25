@@ -1,0 +1,16 @@
+<div class="container-fluid h-100">
+    <div class="sidebar h-100-p">
+        <app-side-bar class="h-100"></app-side-bar>
+    </div>
+    <div class="h-100-p w-100-p">
+        <app-nav-bar class="h-74"></app-nav-bar>
+
+        <div class="container-fluid" style="float: right; width: calc(100% - 300px)">
+            <div class="route">
+                <div class="router-outlet-wrapper router-outlet-container">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

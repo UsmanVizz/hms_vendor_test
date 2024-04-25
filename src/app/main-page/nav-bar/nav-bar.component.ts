@@ -1,11 +1,9 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { ROUTES } from '../side-bar/side-bar.component';
-import {
-  Location,
-  LocationStrategy,
-  PathLocationStrategy,
-} from '@angular/common';
+import { Location } from '@angular/common';
 import { Router } from '@angular/router';
+// import { valueOrDefault } from 'chart.js/dist/helpers/helpers.core';
+import { CdkMenu } from '@angular/cdk/menu';
 // import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -20,7 +18,7 @@ export class NavBarComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
   title: string;
-  showUserProfileMenu: boolean = false;
+  @ViewChild('menu') menu!: CdkMenu;
 
   constructor(
     location: Location,
@@ -59,6 +57,8 @@ export class NavBarComponent implements OnInit {
     this.sidebarVisible = true;
   }
 
+
+  
   sidebarClose() {
     const body = document.getElementsByTagName('body')[0];
     this.toggleButton.classList.remove('toggled');
@@ -137,11 +137,6 @@ export class NavBarComponent implements OnInit {
     }
 
     return title;
-  }
-
-  toggleUserProfileMenu() {
-    this.showUserProfileMenu = !this.showUserProfileMenu;
-    console.log('showUserProfileMenu:', this.showUserProfileMenu);
   }
 
   // getTitle() {

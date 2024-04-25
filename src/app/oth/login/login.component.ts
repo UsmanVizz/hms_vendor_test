@@ -27,19 +27,19 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   userLoggedIn() {
     console.log(this.userLogin.value);
 
-    this.router.navigate(['hms-main']);
+    this.router.navigate(['hms-owner']);
   }
 
   forgotPassword() {
     this.router.navigate(['forgot-password']);
   }
 
-  
+
 
   togglePasswordVisibility(): void {
     this.hidePassword = !this.hidePassword;

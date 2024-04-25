@@ -34,7 +34,8 @@ export class ManageBranchComponent implements OnInit {
   getBranchData() {
     this.manageService.getManageBranch().subscribe(
       (response) => {
-        this.menuCategories = response.data;
+        console.log('data', response.data.users);
+        this.menuCategories = response.data.users;
       },
       (error) => {
         console.log(error);
@@ -43,7 +44,7 @@ export class ManageBranchComponent implements OnInit {
   }
 
   navigateToAddBranch() {
-    this.router.navigate(['/hms-main/add-branch']);
+    this.router.navigate(['/hms-owner/add-branch']);
   }
   activeIndex: number = 0;
 

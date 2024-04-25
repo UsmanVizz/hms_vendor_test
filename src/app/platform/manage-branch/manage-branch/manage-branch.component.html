@@ -1,21 +1,7 @@
 <div class="d-flex align-items-center" style="margin-top: 40px">
-  <h1
-    class="text-black flex-grow-1 mb-0"
-    style="
-      font-size: 18px;
-      font-weight: 700;
-      color: black;
-      font-family: Plus Jakarta Sans;
-    "
-  >
-    All Branches
-  </h1>
+  <h1 class="text-black flex-grow-1 mb-0 branches">All Branches</h1>
   <div class="ml-auto">
-    <button
-      class="custom-button"
-      style="background-color: blue; font-size: 16px"
-      (click)="navigateToAddBranch()"
-    >
+    <button class="custom-button" (click)="navigateToAddBranch()">
       Add Branch
     </button>
   </div>
@@ -26,7 +12,8 @@
       <i class="fas fa-search"></i>
     </button>
     <button class="mx-2 sort-button" type="button">
-      <i class="fas fa-bars"> Sort All</i>
+      <i class="fas fa-bars"> Sort</i
+      ><span class="btn-text span-text__color mx-3">All</span>
     </button>
 
     <button class="mx-2 sort-button" type="button">
@@ -61,11 +48,11 @@
                 *ngFor="let category of menuCategories; let i = index"
                 [class.active]="i === activeIndex"
               >
-                <img
+                <!-- <img
                   [defaultImage]="defaultImage"
                   [lazyLoad]="category.image"
                   alt="Image not found"
-                />
+                /> -->
               </div>
             </div>
           </div>

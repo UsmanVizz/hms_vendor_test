@@ -1,0 +1,11 @@
+.container-fluid {
+    background: #f5f7fa;
+  }
+  
+  @media (min-width: 1400px) {
+    .container {
+      width: 1264px !important;
+      max-width: 1540px;
+    }
+  }
+  

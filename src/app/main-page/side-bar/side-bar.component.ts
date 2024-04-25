@@ -1,4 +1,10 @@
-import { Component, OnInit, Renderer2, ElementRef, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Renderer2,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 declare const $: any;
@@ -19,18 +25,12 @@ export const ROUTES: RouteInfo[] = [
   },
 ];
 
-
-
-
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.scss'],
 })
-
-
 export class SideBarComponent implements OnInit {
-
   showSubmenu(itemEl: HTMLElement) {
     itemEl.classList.toggle('showMenu');
   }
@@ -66,7 +66,7 @@ export class SideBarComponent implements OnInit {
       routerLink: null,
       subItems: [
         { title: 'Category', routerLink: 'catagories' },
-        { title: 'Menu', routerLink: 'menu' },
+        { title: 'Menu listing', routerLink: 'menu' },
         { title: 'Deals', routerLink: 'deals' },
       ],
       showDropdown: false,
@@ -109,23 +109,19 @@ export class SideBarComponent implements OnInit {
     },
   ];
 
-
-
   darkMode = false;
   sidebar: any;
   home: any;
   body: any;
   sidebar_state: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  @HostListener("window:resize", ["$event"])
+  @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
     this.ngOnInit();
   }
   ngOnInit() {
-
-
     this.sidebar = document.querySelector('.sidebar');
     this.home = document.querySelector('.home');
     this.body = document.querySelector('body');
@@ -155,11 +151,9 @@ export class SideBarComponent implements OnInit {
         this.sidebar_state = true;
       }
     }
-
   }
 
   toggleDarkMode() {
-
     if (this.body?.classList.contains('dark')) {
       this.body.classList.remove('dark');
       localStorage.setItem('dark_mode', 'false');

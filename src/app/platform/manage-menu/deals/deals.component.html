@@ -1,4 +1,4 @@
-<!-- <div class="d-flex align-items-center category" style="margin-top: 100px">
+<div class="d-flex align-items-center category" style="margin-top: 100px">
   <h1
     class="text-black flex-grow-1 mb-0"
     style="
@@ -8,12 +8,12 @@
       font-family: Plus Jakarta Sans;
     "
   >
-   Manage Deal
+    Manage Deal
   </h1>
   <div class="ml-auto">
     <button
       class="custom-button"
-      style="background-color: blue; font-size: 16px"
+      style="background-color: #fb6f10; font-size: 16px"
       (click)="navigateToAddDeal()"
     >
       Add Deal
@@ -23,7 +23,7 @@
 <div class="d-flex align-items-center mt-5 mx-2">
   <div class="ml-auto">
     <button class="mx-2 sort-button" type="button">
-      <i class="pi pi-search"></i>
+      <i class="fas fa-search"></i>
     </button>
     <button class="mx-2 sort-button" type="button">
       <i class="fas fa-bars"> Sort All</i>
@@ -34,8 +34,12 @@
     </button>
   </div>
 </div>
-<div class="row" style="margin-top: 30px">
-  <div class="mb-3 mb-sm-0" *ngFor="let category of cards">
+<div class="row d-flex justify-content-center" style="margin-top: 30px">
+  <div
+    class="mb-3 mb-sm-0"
+    *ngFor="let category of cards"
+    style="max-width: 720px"
+  >
     <div class="card" style="margin-bottom: 20px">
       <div class="row no-gutters">
         <div class="image-container">
@@ -44,7 +48,6 @@
             class="carousel slide"
             data-ride="carousel"
           >
-       
             <ol class="carousel-indicators">
               <span
                 class="indicator"
@@ -53,7 +56,7 @@
                 (click)="activeIndex = i"
               ></span>
             </ol>
-          
+
             <div class="carousel-inner" role="listbox">
               <div
                 class="item card-img"
@@ -70,43 +73,43 @@
             <div class="d-flex align-items-center">
               <h5 class="card-title flex-grow-1 mb-0">{{ category.title }}</h5>
               <span>
-                <p-inputSwitch [(ngModel)]="category.isChecked"></p-inputSwitch>
+                <!-- <inputSwitch [(ngModel)]="category.isChecked"></p-inputSwitch> -->
               </span>
             </div>
             <p class="card-text">{{ category.text }}</p>
-              <h5 class="card-title flex-grow-1 mb-0">{{ category.dealTitle }}</h5>
-              <p class="card-text">{{ category.dealText }}</p>
+            <h5 class="card-title flex-grow-1 mb-0">
+              {{ category.dealTitle }}
+            </h5>
+            <p class="card-text">{{ category.dealText }}</p>
             <div class="d-flex align-items-center">
               <p class="text-grey flex-grow-1 mb-0">
                 Standard Rate:
-                <span style="color: blue; font-weight: 600; text-decoration: line-through;">{{
-                  category.standardRate
-                }}</span>
-            
+                <span
+                  style="
+                    color: orange;
+                    font-weight: 600;
+                    text-decoration: line-through;
+                  "
+                  >{{ category.standardRate }}</span
+                >
+
                 Discount Rate:
-                <span style="color: blue; font-weight: 600">{{
+                <span style="color: #fb6f10; font-weight: 600">{{
                   category.discountRate
                 }}</span>
               </p>
               <span>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-filter"
-                  severity="secondary"
-                  [outlined]="true"
-                ></p-button>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-trash"
-                  severity="secondary"
-                  [outlined]="true"
-                ></p-button>
-                <p-button
-                  class="m-2"
-                  icon="pi pi-eye"
-                  severity="secondary"
-                  [outlined]="true"
-                ></p-button>
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn-button m-2">
+                    <i class="fas fa-filter"></i>
+                  </button>
+                  <button type="button" class="btn-button m-2">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <button type="button" class="btn-button m-2">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
               </span>
             </div>
           </div>
@@ -114,4 +117,4 @@
       </div>
     </div>
   </div>
-</div> -->
+</div>

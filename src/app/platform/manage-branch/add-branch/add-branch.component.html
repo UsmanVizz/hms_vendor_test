@@ -1,15 +1,13 @@
 <div class="d-flex justify-content-between mt-5">
-  <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
-      <ol class="breadcrumb mb-0">
-        <li class="breadcrumb-item"><a href="#"><i class="fas fa-light fa-city mx-3"></i>Manage Branch</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Add Branch</li>
-      </ol>
-    </nav>
-    <button
-    class="custom-button"
-  >
-Add Branch
-  </button>
+  <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb mb-0">
+      <li class="breadcrumb-item">
+        <a href="#"><i class="fas fa-light fa-city mx-3"></i>Manage Branch</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Add Branch</li>
+    </ol>
+  </nav>
+  <button class="custom-button">Add Branch</button>
 </div>
 <div class="card">
   <div class="card-title">Branch Details</div>
@@ -17,38 +15,34 @@ Add Branch
     <form>
       <div class="row">
         <div class="col-md">
-          <label for="branchName" class="br-name">Branch Name</label>
+          <label for="branchName" class="branch">Branch Name</label>
           <input type="text" class="form-control" placeholder="Branch Name" />
         </div>
         <div class="col-md">
-          <label for="branchId" class="br-id">Branch Id</label>
+          <label for="branchId" class="branch">Branch Id</label>
           <input type="text" class="form-control" placeholder="Branch Id" />
         </div>
       </div>
-    <div class="form-group">
-      <div class="row">
-        <div class="col-md">
-          <label for="br-decription" class="br-decription"
-            >Branch Description</label
-          >
-          <textarea
-            class="form-control"
-            id="inputDescription"
-            rows="6"
-            placeholder=" "
-          ></textarea>
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md">
+            <label for="br-decription" class="branch">Branch Description</label>
+            <textarea
+              class="form-control"
+              id="inputDescription"
+              rows="6"
+              placeholder=" "
+            ></textarea>
+          </div>
         </div>
       </div>
-    </div>
       <div class="row">
         <div class="col-md">
-          <label for="branchName" class="add-address">Add Address</label>
+          <label for="branchName" class="branch">Add Address</label>
           <input type="text" class="form-control" placeholder="Address" />
         </div>
         <div class="col-md">
-          <label for="branchId" class="parking-capacity"
-            >Parking Capacity</label
-          >
+          <label for="branchId" class="branch">Parking Capacity</label>
           <input
             type="text"
             class="form-control"
@@ -59,7 +53,7 @@ Add Branch
 
       <div class="row">
         <div class="col">
-          <label for="br-decription" class="br-decription">Branch Detail</label>
+          <label for="br-decription" class="branch">Branch Detail</label>
           <select
             class="form-select form-select-lg"
             aria-label=".form-select-lg example"
@@ -71,12 +65,12 @@ Add Branch
           </select>
         </div>
         <div class="col mt-5">
-          <label for="branchName" class="br-name"></label>
-          <button type="button" class="btn btn-primary">Add Service</button>
+          <label for="branchName" class="branch"></label>
+          <button type="button" class="btn">Add Service</button>
         </div>
       </div>
       <!--Image Upload in Chips-->
-      
+
       <div class="d-flex align-items-center mt-5 gap-3 mx-5">
         <div *ngFor="let image of uploadedImages" class="chip">
           <img
