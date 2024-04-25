@@ -1,7 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output, SimpleChanges, ViewChild, } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { GoogleMap } from '@angular/google-maps';
-import { MapAdvancedMarker } from "@angular/google-maps"
 
 declare global {
   interface Document {
